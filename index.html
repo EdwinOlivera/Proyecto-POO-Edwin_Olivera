@@ -1,860 +1,1172 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Zuhaus</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="src/provider/img/favicon.png">
-    <!-- Place favicon.ico in the root directory -->
-
-    <!-- CSS here -->
-    <link rel="stylesheet" href="src/css/bootstrap.min.css">
-    <link rel="stylesheet" href="src/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="src/css/magnific-popup.css">
-    <link rel="stylesheet" href="src/css/font-awesome.min.css">
-    <link rel="stylesheet" href="src/css/themify-icons.css">
-    <link rel="stylesheet" href="src/css/nice-select.css">
-    <link rel="stylesheet" href="src/css/flaticon.css">
-    <link rel="stylesheet" href="src/css/gijgo.css">
-    <link rel="stylesheet" href="src/css/animate.css">
-    <link rel="stylesheet" href="src/css/slick.css">
-    <link rel="stylesheet" href="src/css/slicknav.css">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
-
-    <link rel="stylesheet" href="src/css/style.css">
-    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="CodePixar">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Karma Shop</title>
+	<!--
+		CSS
+		============================================= -->
+	<link rel="stylesheet" href="css/linearicons.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/nouislider.min.css">
+	<link rel="stylesheet" href="css/ion.rangeSlider.css" />
+	<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
 
-    <!-- header-start -->
-    <header>
-        <div class="header-area ">
-            <div id="sticky-header" class="main-header-area">
-                <div class="container-fluid">
-                    <div class="header_bottom_border">
-                        <div class="row align-items-center">
-                            <div class="col-xl-2 col-lg-2">
-                                <div class="logo">
-                                    <a href="index.html">
-                                        <img src="src/provider/img/logo.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6">
-                                <div class="main-menu  d-none d-lg-block">
-                                    <nav>
-                                        <ul id="navigation">
-                                            <li><a class="active" href="index.html">Inicio</a></li>
-                                            <li><a href="src/page/about.html">conocenos</a></li>
-                                            <li><a class="" href="src/page/travel_destination.html">Productos</a></l/li>
-                                            <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                        <li><a href="src/page/destination_details.html">Destinations details</a></li>
-                                                        <li><a href="src/page/elements.html">elements</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                    <li><a href="src/page/blog.html">blog</a></li>
-                                                    <li><a href="single-blog.html">single-blog</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="src/page/contact.html">Contact</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 d-none d-lg-block">
-                                <div class="social_wrap d-flex align-items-center justify-content-end">
-                                    <div class="number">
-                                        <p> <i class="fa fa-phone"></i> 10(256)-928 256</p>
-                                    </div>
-                                    <div class="social_links d-none d-xl-block">
-                                        <ul>
-                                            <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
-                                            <li><a href="#"> <i class="fa fa-linkedin"></i> </a></li>
-                                            <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
-                                            <li><a href="#"> <i class="fa fa-google-plus"></i> </a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="seach_icon">
-                                <a data-toggle="modal" data-target="#exampleModalCenter" href="#">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </div>
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
-                            </div>
-                        </div>
-                    </div>
+	<!-- Start Header Area -->
+	<header class="header_area sticky-header">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light main_box">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Shop</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="category.html">Shop Category</a></li>
+									<li class="nav-item"><a class="nav-link" href="single-product.html">Product Details</a></li>
+									<li class="nav-item"><a class="nav-link" href="checkout.html">Product Checkout</a></li>
+									<li class="nav-item"><a class="nav-link" href="cart.html">Shopping Cart</a></li>
+									<li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
+								</ul>
+							</li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Blog</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+								</ul>
+							</li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Pages</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+									<li class="nav-item"><a class="nav-link" href="tracking.html">Tracking</a></li>
+									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+								</ul>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
+							<li class="nav-item">
+								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div class="search_input" id="search_input_box">
+			<div class="container">
+				<form class="d-flex justify-content-between">
+					<input type="text" class="form-control" id="search_input" placeholder="Search Here">
+					<button type="submit" class="btn"></button>
+					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
+				</form>
+			</div>
+		</div>
+	</header>
+	<!-- End Header Area -->
 
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- header-end -->
+	<!-- start banner Area -->
+	<section class="banner-area">
+		<div class="container">
+			<div class="row fullscreen align-items-center justify-content-start">
+				<div class="col-lg-12">
+					<div class="active-banner-slider owl-carousel">
+						<!-- single-slide -->
+						<div class="row single-slide align-items-center d-flex">
+							<div class="col-lg-5 col-md-6">
+								<div class="banner-content">
+									<h1>Nike New <br>Collection!</h1>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+									<div class="add-bag d-flex align-items-center">
+										<a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
+										<span class="add-text text-uppercase">Add to Bag</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-7">
+								<div class="banner-img">
+									<img class="img-fluid" src="img/banner/banner-img.png" alt="">
+								</div>
+							</div>
+						</div>
+						<!-- single-slide -->
+						<div class="row single-slide">
+							<div class="col-lg-5">
+								<div class="banner-content">
+									<h1>Nike New <br>Collection!</h1>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+									<div class="add-bag d-flex align-items-center">
+										<a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
+										<span class="add-text text-uppercase">Add to Bag</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-7">
+								<div class="banner-img">
+									<img class="img-fluid" src="img/banner/banner-img.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End banner Area -->
 
-    <!-- slider_area_start -->
-    <div class="slider_area">
-        <div class="slider_active owl-carousel">
-            <div class="single_slider  d-flex align-items-center slider_bg_1 overlay">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-xl-12 col-md-12">
-                            <div class="slider_text text-center">
-                                <h3>Indonesia</h3>
-                                <p>Pixel perfect design with awesome contents</p>
-                                <a href="#" class="boxed-btn3">Explore Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single_slider  d-flex align-items-center slider_bg_2 overlay">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-xl-12 col-md-12">
-                            <div class="slider_text text-center">
-                                <h3>Australia</h3>
-                                <p>Pixel perfect design with awesome contents</p>
-                                <a href="#" class="boxed-btn3">Explore Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single_slider  d-flex align-items-center slider_bg_3 overlay">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-xl-12 col-md-12">
-                            <div class="slider_text text-center">
-                                <h3>Switzerland</h3>
-                                <p>Pixel perfect design with awesome contents</p>
-                                <a href="#" class="boxed-btn3">Explore Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+	<!-- start features Area -->
+	<section class="features-area section_gap">
+		<div class="container">
+			<div class="row features-inner">
+				<!-- single features -->
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single-features">
+						<div class="f-icon">
+							<img src="img/features/f-icon1.png" alt="">
+						</div>
+						<h6>Free Delivery</h6>
+						<p>Free Shipping on all order</p>
+					</div>
+				</div>
+				<!-- single features -->
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single-features">
+						<div class="f-icon">
+							<img src="img/features/f-icon2.png" alt="">
+						</div>
+						<h6>Return Policy</h6>
+						<p>Free Shipping on all order</p>
+					</div>
+				</div>
+				<!-- single features -->
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single-features">
+						<div class="f-icon">
+							<img src="img/features/f-icon3.png" alt="">
+						</div>
+						<h6>24/7 Support</h6>
+						<p>Free Shipping on all order</p>
+					</div>
+				</div>
+				<!-- single features -->
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single-features">
+						<div class="f-icon">
+							<img src="img/features/f-icon4.png" alt="">
+						</div>
+						<h6>Secure Payment</h6>
+						<p>Free Shipping on all order</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end features Area -->
 
-    </div>
-    <!-- slider_area_end -->
+	<!-- Start category Area -->
+	<section class="category-area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 col-md-12">
+					<div class="row">
+						<div class="col-lg-8 col-md-8">
+							<div class="single-deal">
+								<div class="overlay"></div>
+								<img class="img-fluid w-100" src="img/category/c1.jpg" alt="">
+								<a href="img/category/c1.jpg" class="img-pop-up" target="_blank">
+									<div class="deal-details">
+										<h6 class="deal-title">Sneaker for Sports</h6>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4">
+							<div class="single-deal">
+								<div class="overlay"></div>
+								<img class="img-fluid w-100" src="img/category/c2.jpg" alt="">
+								<a href="img/category/c2.jpg" class="img-pop-up" target="_blank">
+									<div class="deal-details">
+										<h6 class="deal-title">Sneaker for Sports</h6>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4">
+							<div class="single-deal">
+								<div class="overlay"></div>
+								<img class="img-fluid w-100" src="img/category/c3.jpg" alt="">
+								<a href="img/category/c3.jpg" class="img-pop-up" target="_blank">
+									<div class="deal-details">
+										<h6 class="deal-title">Product for Couple</h6>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-lg-8 col-md-8">
+							<div class="single-deal">
+								<div class="overlay"></div>
+								<img class="img-fluid w-100" src="img/category/c4.jpg" alt="">
+								<a href="img/category/c4.jpg" class="img-pop-up" target="_blank">
+									<div class="deal-details">
+										<h6 class="deal-title">Sneaker for Sports</h6>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="single-deal">
+						<div class="overlay"></div>
+						<img class="img-fluid w-100" src="img/category/c5.jpg" alt="">
+						<a href="img/category/c5.jpg" class="img-pop-up" target="_blank">
+							<div class="deal-details">
+								<h6 class="deal-title">Sneaker for Sports</h6>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End category Area -->
 
-    <!-- where_togo_area_start  -->
-    <div class="where_togo_area">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-3">
-                    <div class="form_area">
-                        <h3>Where you want to go?</h3>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="search_wrap">
-                        <form class="search_form" action="#">
-                            <div class="input_field">
-                                <input type="text" placeholder="Where to go?">
-                            </div>
-                            <div class="input_field">
-                                <input id="datepicker" placeholder="Date">
-                            </div>
-                            <div class="input_field">
-                                <select>
-                                    <option data-display="Travel type">Travel type</option>
-                                    <option value="1">Some option</option>
-                                    <option value="2">Another option</option>
-                                </select>
-                            </div>
-                            <div class="search_btn">
-                                <button class="boxed-btn4 " type="submit" >Search</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- where_togo_area_end  -->
-    
-    <!-- popular_destination_area_start  -->
-    <div class="popular_destination_area">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center mb_70">
-                        <h3>Popular Destination</h3>
-                        <p>Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf moon beard words.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_destination">
-                        <div class="thumb">
-                            <img src="src/provider/img/destination/1.png" alt="">
-                        </div>
-                        <div class="content">
-                            <p class="d-flex align-items-center">Italy <a href="travel_destination.html">  07 Places</a> </p>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_destination">
-                        <div class="thumb">
-                            <img src="src/provider/img/destination/2.png" alt="">
-                        </div>
-                        <div class="content">
-                            <p class="d-flex align-items-center">Brazil <a href="travel_destination.html">  03 Places</a> </p>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_destination">
-                        <div class="thumb">
-                            <img src="src/provider/img/destination/3.png" alt="">
-                        </div>
-                        <div class="content">
-                            <p class="d-flex align-items-center">America <a href="travel_destination.html">  10 Places</a> </p>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_destination">
-                        <div class="thumb">
-                            <img src="src/provider/img/destination/4.png" alt="">
-                        </div>
-                        <div class="content">
-                            <p class="d-flex align-items-center">Nepal <a href="travel_destination.html">  02 Places</a> </p>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_destination">
-                        <div class="thumb">
-                            <img src="src/provider/img/destination/5.png" alt="">
-                        </div>
-                        <div class="content">
-                            <p class="d-flex align-items-center">Maldives <a href="travel_destination.html">  02 Places</a> </p>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_destination">
-                        <div class="thumb">
-                            <img src="src/provider/img/destination/6.png" alt="">
-                        </div>
-                        <div class="content">
-                            <p class="d-flex align-items-center">Indonesia <a href="travel_destination.html">  05 Places</a> </p>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- popular_destination_area_end  -->
+	<!-- start product Area -->
+	<section class="owl-carousel active-product-area section_gap">
+		<!-- single product slide -->
+		<div class="single-product-slider">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-6 text-center">
+						<div class="section-title">
+							<h1>Latest Products</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore
+								magna aliqua.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="img/product/p1.jpg" alt="">
+							<div class="product-details">
+								<h6>addidas New Hammer sole
+									for Sports person</h6>
+								<div class="price">
+									<h6>$150.00</h6>
+									<h6 class="l-through">$210.00</h6>
+								</div>
+								<div class="prd-bottom">
 
-    <!-- newletter_area_start  -->
-    <div class="newletter_area overlay">
-        <div class="container">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-lg-10">
-                    <div class="row align-items-center">
-                        <div class="col-lg-5">
-                            <div class="newsletter_text">
-                                <h4>Subscribe Our Newsletter</h4>
-                                <p>Subscribe newsletter to get offers and about
-                                    new places to discover.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="mail_form">
-                                <div class="row no-gutters">
-                                    <div class="col-lg-9 col-md-8">
-                                        <div class="newsletter_field">
-                                            <input type="email" placeholder="Your mail" >
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-4">
-                                        <div class="newsletter_btn">
-                                            <button class="boxed-btn4 " type="submit" >Subscribe</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- newletter_area_end  -->
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">add to bag</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">Wishlist</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">compare</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">view more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="img/product/p2.jpg" alt="">
+							<div class="product-details">
+								<h6>addidas New Hammer sole
+									for Sports person</h6>
+								<div class="price">
+									<h6>$150.00</h6>
+									<h6 class="l-through">$210.00</h6>
+								</div>
+								<div class="prd-bottom">
 
-    <div class="popular_places_area">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center mb_70">
-                        <h3>Popular Places</h3>
-                        <p>Suffered alteration in some form, by injected humour or good day randomised booth anim 8-bit hella wolf moon beard words.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_place">
-                        <div class="thumb">
-                            <img src="src/provider/img/place/1.png" alt="">
-                            <a href="#" class="prise">$500</a>
-                        </div>
-                        <div class="place_info">
-                            <a href="destination_details.html"><h3>California</h3></a>
-                            <p>United State of America</p>
-                            <div class="rating_days d-flex justify-content-between">
-                                <span class="d-flex justify-content-center align-items-center">
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i>
-                                     <a href="#">(20 Review)</a>
-                                </span>
-                                <div class="days">
-                                    <i class="fa fa-clock-o"></i>
-                                    <a href="#">5 Days</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_place">
-                        <div class="thumb">
-                            <img src="src/provider/img/place/2.png" alt="">
-                            <a href="#" class="prise">$500</a>
-                        </div>
-                        <div class="place_info">
-                            <a href="destination_details.html"><h3>Korola Megna</h3></a>
-                            <p>United State of America</p>
-                            <div class="rating_days d-flex justify-content-between">
-                                <span class="d-flex justify-content-center align-items-center">
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i>
-                                     <a href="#">(20 Review)</a>
-                                </span>
-                                <div class="days">
-                                    <i class="fa fa-clock-o"></i>
-                                    <a href="#">5 Days</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_place">
-                        <div class="thumb">
-                            <img src="src/provider/img/place/3.png" alt="">
-                            <a href="#" class="prise">$500</a>
-                        </div>
-                        <div class="place_info">
-                            <a href="destination_details.html"><h3>London</h3></a>
-                            <p>United State of America</p>
-                            <div class="rating_days d-flex justify-content-between">
-                                <span class="d-flex justify-content-center align-items-center">
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i>
-                                     <a href="#">(20 Review)</a>
-                                </span>
-                                <div class="days">
-                                    <i class="fa fa-clock-o"></i>
-                                    <a href="#">5 Days</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_place">
-                        <div class="thumb">
-                            <img src="src/provider/img/place/4.png" alt="">
-                            <a href="#" class="prise">$500</a>
-                        </div>
-                        <div class="place_info">
-                            <a href="destination_details.html"><h3>Miami Beach</h3></a>
-                            <p>United State of America</p>
-                            <div class="rating_days d-flex justify-content-between">
-                                <span class="d-flex justify-content-center align-items-center">
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i>
-                                     <a href="#">(20 Review)</a>
-                                </span>
-                                <div class="days">
-                                    <i class="fa fa-clock-o"></i>
-                                    <a href="#">5 Days</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_place">
-                        <div class="thumb">
-                            <img src="src/provider/img/place/5.png" alt="">
-                            <a href="#" class="prise">$500</a>
-                        </div>
-                        <div class="place_info">
-                            <a href="destination_details.html"><h3>California</h3></a>
-                            <p>United State of America</p>
-                            <div class="rating_days d-flex justify-content-between">
-                                <span class="d-flex justify-content-center align-items-center">
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i>
-                                     <a href="#">(20 Review)</a>
-                                </span>
-                                <div class="days">
-                                    <i class="fa fa-clock-o"></i>
-                                    <a href="#">5 Days</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_place">
-                        <div class="thumb">
-                            <img src="src/provider/img/place/6.png" alt="">
-                            <a href="#" class="prise">$500</a>
-                        </div>
-                        <div class="place_info">
-                            <a href="destination_details.html"><h3>Saintmartine Iceland</h3></a>
-                            <p>United State of America</p>
-                            <div class="rating_days d-flex justify-content-between">
-                                <span class="d-flex justify-content-center align-items-center">
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i> 
-                                     <i class="fa fa-star"></i>
-                                     <a href="#">(20 Review)</a>
-                                </span>
-                                <div class="days">
-                                    <i class="fa fa-clock-o"></i>
-                                    <a href="#">5 Days</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="more_place_btn text-center">
-                        <a class="boxed-btn4" href="#">More Places</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">add to bag</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">Wishlist</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">compare</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">view more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="img/product/p3.jpg" alt="">
+							<div class="product-details">
+								<h6>addidas New Hammer sole
+									for Sports person</h6>
+								<div class="price">
+									<h6>$150.00</h6>
+									<h6 class="l-through">$210.00</h6>
+								</div>
+								<div class="prd-bottom">
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">add to bag</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">Wishlist</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">compare</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">view more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="img/product/p4.jpg" alt="">
+							<div class="product-details">
+								<h6>addidas New Hammer sole
+									for Sports person</h6>
+								<div class="price">
+									<h6>$150.00</h6>
+									<h6 class="l-through">$210.00</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">add to bag</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">Wishlist</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">compare</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">view more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="img/product/p5.jpg" alt="">
+							<div class="product-details">
+								<h6>addidas New Hammer sole
+									for Sports person</h6>
+								<div class="price">
+									<h6>$150.00</h6>
+									<h6 class="l-through">$210.00</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">add to bag</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">Wishlist</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">compare</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">view more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="img/product/p6.jpg" alt="">
+							<div class="product-details">
+								<h6>addidas New Hammer sole
+									for Sports person</h6>
+								<div class="price">
+									<h6>$150.00</h6>
+									<h6 class="l-through">$210.00</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">add to bag</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">Wishlist</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">compare</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">view more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="img/product/p7.jpg" alt="">
+							<div class="product-details">
+								<h6>addidas New Hammer sole
+									for Sports person</h6>
+								<div class="price">
+									<h6>$150.00</h6>
+									<h6 class="l-through">$210.00</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">add to bag</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">Wishlist</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">compare</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">view more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="img/product/p8.jpg" alt="">
+							<div class="product-details">
+								<h6>addidas New Hammer sole
+									for Sports person</h6>
+								<div class="price">
+									<h6>$150.00</h6>
+									<h6 class="l-through">$210.00</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">add to bag</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">Wishlist</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">compare</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">view more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- single product slide -->
+		<div class="single-product-slider">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-6 text-center">
+						<div class="section-title">
+							<h1>Coming Products</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore
+								magna aliqua.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="img/product/p6.jpg" alt="">
+							<div class="product-details">
+								<h6>addidas New Hammer sole
+									for Sports person</h6>
+								<div class="price">
+									<h6>$150.00</h6>
+									<h6 class="l-through">$210.00</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">add to bag</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">Wishlist</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">compare</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">view more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="img/product/p8.jpg" alt="">
+							<div class="product-details">
+								<h6>addidas New Hammer sole
+									for Sports person</h6>
+								<div class="price">
+									<h6>$150.00</h6>
+									<h6 class="l-through">$210.00</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">add to bag</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">Wishlist</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">compare</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">view more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="img/product/p3.jpg" alt="">
+							<div class="product-details">
+								<h6>addidas New Hammer sole
+									for Sports person</h6>
+								<div class="price">
+									<h6>$150.00</h6>
+									<h6 class="l-through">$210.00</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">add to bag</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">Wishlist</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">compare</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">view more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="img/product/p5.jpg" alt="">
+							<div class="product-details">
+								<h6>addidas New Hammer sole
+									for Sports person</h6>
+								<div class="price">
+									<h6>$150.00</h6>
+									<h6 class="l-through">$210.00</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">add to bag</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">Wishlist</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">compare</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">view more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="img/product/p1.jpg" alt="">
+							<div class="product-details">
+								<h6>addidas New Hammer sole
+									for Sports person</h6>
+								<div class="price">
+									<h6>$150.00</h6>
+									<h6 class="l-through">$210.00</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">add to bag</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">Wishlist</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">compare</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">view more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="img/product/p4.jpg" alt="">
+							<div class="product-details">
+								<h6>addidas New Hammer sole
+									for Sports person</h6>
+								<div class="price">
+									<h6>$150.00</h6>
+									<h6 class="l-through">$210.00</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">add to bag</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">Wishlist</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">compare</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">view more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="img/product/p1.jpg" alt="">
+							<div class="product-details">
+								<h6>addidas New Hammer sole
+									for Sports person</h6>
+								<div class="price">
+									<h6>$150.00</h6>
+									<h6 class="l-through">$210.00</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">add to bag</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">Wishlist</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">compare</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">view more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-3 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid" src="img/product/p8.jpg" alt="">
+							<div class="product-details">
+								<h6>addidas New Hammer sole
+									for Sports person</h6>
+								<div class="price">
+									<h6>$150.00</h6>
+									<h6 class="l-through">$210.00</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">add to bag</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">Wishlist</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-sync"></span>
+										<p class="hover-text">compare</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">view more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end product Area -->
+
+	<!-- Start exclusive deal Area -->
+	<section class="exclusive-deal-area">
+		<div class="container-fluid">
+			<div class="row justify-content-center align-items-center">
+				<div class="col-lg-6 no-padding exclusive-left">
+					<div class="row clock_sec clockdiv" id="clockdiv">
+						<div class="col-lg-12">
+							<h1>Exclusive Hot Deal Ends Soon!</h1>
+							<p>Who are in extremely love with eco friendly system.</p>
+						</div>
+						<div class="col-lg-12">
+							<div class="row clock-wrap">
+								<div class="col clockinner1 clockinner">
+									<h1 class="days">150</h1>
+									<span class="smalltext">Days</span>
+								</div>
+								<div class="col clockinner clockinner1">
+									<h1 class="hours">23</h1>
+									<span class="smalltext">Hours</span>
+								</div>
+								<div class="col clockinner clockinner1">
+									<h1 class="minutes">47</h1>
+									<span class="smalltext">Mins</span>
+								</div>
+								<div class="col clockinner clockinner1">
+									<h1 class="seconds">59</h1>
+									<span class="smalltext">Secs</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="" class="primary-btn">Shop Now</a>
+				</div>
+				<div class="col-lg-6 no-padding exclusive-right">
+					<div class="active-exclusive-product-slider">
+						<!-- single exclusive carousel -->
+						<div class="single-exclusive-slider">
+							<img class="img-fluid" src="img/product/e-p1.png" alt="">
+							<div class="product-details">
+								<div class="price">
+									<h6>$150.00</h6>
+									<h6 class="l-through">$210.00</h6>
+								</div>
+								<h4>addidas New Hammer sole
+									for Sports person</h4>
+								<div class="add-bag d-flex align-items-center justify-content-center">
+									<a class="add-btn" href=""><span class="ti-bag"></span></a>
+									<span class="add-text text-uppercase">Add to Bag</span>
+								</div>
+							</div>
+						</div>
+						<!-- single exclusive carousel -->
+						<div class="single-exclusive-slider">
+							<img class="img-fluid" src="img/product/e-p1.png" alt="">
+							<div class="product-details">
+								<div class="price">
+									<h6>$150.00</h6>
+									<h6 class="l-through">$210.00</h6>
+								</div>
+								<h4>addidas New Hammer sole
+									for Sports person</h4>
+								<div class="add-bag d-flex align-items-center justify-content-center">
+									<a class="add-btn" href=""><span class="ti-bag"></span></a>
+									<span class="add-text text-uppercase">Add to Bag</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End exclusive deal Area -->
+
+	<!-- Start brand Area -->
+	<section class="brand-area section_gap">
+		<div class="container">
+			<div class="row">
+				<a class="col single-img" href="#">
+					<img class="img-fluid d-block mx-auto" src="img/brand/1.png" alt="">
+				</a>
+				<a class="col single-img" href="#">
+					<img class="img-fluid d-block mx-auto" src="img/brand/2.png" alt="">
+				</a>
+				<a class="col single-img" href="#">
+					<img class="img-fluid d-block mx-auto" src="img/brand/3.png" alt="">
+				</a>
+				<a class="col single-img" href="#">
+					<img class="img-fluid d-block mx-auto" src="img/brand/4.png" alt="">
+				</a>
+				<a class="col single-img" href="#">
+					<img class="img-fluid d-block mx-auto" src="img/brand/5.png" alt="">
+				</a>
+			</div>
+		</div>
+	</section>
+	<!-- End brand Area -->
+
+	<!-- Start related-product Area -->
+	<section class="related-product-area section_gap_bottom">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-6 text-center">
+					<div class="section-title">
+						<h1>Deals of the Week</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+							magna aliqua.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-9">
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
+							<div class="single-related-product d-flex">
+								<a href="#"><img src="img/r1.jpg" alt=""></a>
+								<div class="desc">
+									<a href="#" class="title">Black lace Heels</a>
+									<div class="price">
+										<h6>$189.00</h6>
+										<h6 class="l-through">$210.00</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
+							<div class="single-related-product d-flex">
+								<a href="#"><img src="img/r2.jpg" alt=""></a>
+								<div class="desc">
+									<a href="#" class="title">Black lace Heels</a>
+									<div class="price">
+										<h6>$189.00</h6>
+										<h6 class="l-through">$210.00</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
+							<div class="single-related-product d-flex">
+								<a href="#"><img src="img/r3.jpg" alt=""></a>
+								<div class="desc">
+									<a href="#" class="title">Black lace Heels</a>
+									<div class="price">
+										<h6>$189.00</h6>
+										<h6 class="l-through">$210.00</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
+							<div class="single-related-product d-flex">
+								<a href="#"><img src="img/r5.jpg" alt=""></a>
+								<div class="desc">
+									<a href="#" class="title">Black lace Heels</a>
+									<div class="price">
+										<h6>$189.00</h6>
+										<h6 class="l-through">$210.00</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
+							<div class="single-related-product d-flex">
+								<a href="#"><img src="img/r6.jpg" alt=""></a>
+								<div class="desc">
+									<a href="#" class="title">Black lace Heels</a>
+									<div class="price">
+										<h6>$189.00</h6>
+										<h6 class="l-through">$210.00</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
+							<div class="single-related-product d-flex">
+								<a href="#"><img src="img/r7.jpg" alt=""></a>
+								<div class="desc">
+									<a href="#" class="title">Black lace Heels</a>
+									<div class="price">
+										<h6>$189.00</h6>
+										<h6 class="l-through">$210.00</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-related-product d-flex">
+								<a href="#"><img src="img/r9.jpg" alt=""></a>
+								<div class="desc">
+									<a href="#" class="title">Black lace Heels</a>
+									<div class="price">
+										<h6>$189.00</h6>
+										<h6 class="l-through">$210.00</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-related-product d-flex">
+								<a href="#"><img src="img/r10.jpg" alt=""></a>
+								<div class="desc">
+									<a href="#" class="title">Black lace Heels</a>
+									<div class="price">
+										<h6>$189.00</h6>
+										<h6 class="l-through">$210.00</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-related-product d-flex">
+								<a href="#"><img src="img/r11.jpg" alt=""></a>
+								<div class="desc">
+									<a href="#" class="title">Black lace Heels</a>
+									<div class="price">
+										<h6>$189.00</h6>
+										<h6 class="l-through">$210.00</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="ctg-right">
+						<a href="#" target="_blank">
+							<img class="img-fluid d-block mx-auto" src="img/category/c5.jpg" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End related-product Area -->
+
+	<!-- start footer Area -->
+	<footer class="footer-area section_gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3  col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>About Us</h6>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
+							magna aliqua.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4  col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Newsletter</h6>
+						<p>Stay update with our latest</p>
+						<div class="" id="mc_embed_signup">
+
+							<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+							 method="get" class="form-inline">
+
+								<div class="d-flex flex-row">
+
+									<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
+									 required="" type="email">
 
 
-    <div class="video_area video_bg overlay">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="video_wrap text-center">
-                        <h3>Enjoy Video</h3>
-                        <div class="video_icon">
-                            <a class="popup-video video_play_button" href="https://www.youtube.com/watch?v=f59dDEk57i0">
-                                <i class="fa fa-play"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+									<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+									<div style="position: absolute; left: -5000px;">
+										<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+									</div>
 
-
-    <div class="travel_variation_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_travel text-center">
-                        <div class="icon">
-                            <img src="src/provider/img/svg_icon/1.svg" alt="">
-                        </div>
-                        <h3>Comfortable Journey</h3>
-                        <p>A wonderful serenity has taken to the possession of my entire soul.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_travel text-center">
-                        <div class="icon">
-                            <img src="src/provider/img/svg_icon/2.svg" alt="">
-                        </div>
-                        <h3>Luxuries Hotel</h3>
-                        <p>A wonderful serenity has taken to the possession of my entire soul.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_travel text-center">
-                        <div class="icon">
-                            <img src="src/provider/img/svg_icon/3.svg" alt="">
-                        </div>
-                        <h3>Travel Guide</h3>
-                        <p>A wonderful serenity has taken to the possession of my entire soul.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- testimonial_area  -->
-    <div class="testimonial_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="testmonial_active owl-carousel">
-                        <div class="single_carousel">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <div class="single_testmonial text-center">
-                                        <div class="author_thumb">
-                                            <img src="src/provider/img/testmonial/author.png" alt="">
-                                        </div>
-                                        <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering.</p>
-                                        <div class="testmonial_author">
-                                            <h3>- Micky Mouse</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_carousel">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <div class="single_testmonial text-center">
-                                        <div class="author_thumb">
-                                            <img src="src/provider/img/testmonial/author.png" alt="">
-                                        </div>
-                                        <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering.</p>
-                                        <div class="testmonial_author">
-                                            <h3>- Tom Mouse</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_carousel">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <div class="single_testmonial text-center">
-                                        <div class="author_thumb">
-                                            <img src="src/provider/img/testmonial/author.png" alt="">
-                                        </div>
-                                        <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering.</p>
-                                        <div class="testmonial_author">
-                                            <h3>- Jerry Mouse</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /testimonial_area  -->
-
-
-    <div class="recent_trip_area">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center mb_70">
-                        <h3>Recent Trips</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_trip">
-                        <div class="thumb">
-                            <img src="src/provider/img/trip/1.png" alt="">
-                        </div>
-                        <div class="info">
-                            <div class="date">
-                                <span>Oct 12, 2019</span>
-                            </div>
-                            <a href="#">
-                                <h3>Journeys Are Best Measured In
-                                    New Friends</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_trip">
-                        <div class="thumb">
-                            <img src="src/provider/img/trip/2.png" alt="">
-                        </div>
-                        <div class="info">
-                            <div class="date">
-                                <span>Oct 12, 2019</span>
-                            </div>
-                            <a href="#">
-                                <h3>Journeys Are Best Measured In
-                                    New Friends</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_trip">
-                        <div class="thumb">
-                            <img src="src/provider/img/trip/3.png" alt="">
-                        </div>
-                        <div class="info">
-                            <div class="date">
-                                <span>Oct 12, 2019</span>
-                            </div>
-                            <a href="#">
-                                <h3>Journeys Are Best Measured In
-                                    New Friends</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <footer class="footer">
-        <div class="footer_top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-md-6 col-lg-4 ">
-                        <div class="footer_widget">
-                            <div class="footer_logo">
-                                <a href="#">
-                                    <img src="src/provider/img/footer_logo.png" alt="">
-                                </a>
-                            </div>
-                            <p>5th flora, 700/D kings road, green <br> lane New York-1782 <br>
-                                <a href="#">+10 367 826 2567</a> <br>
-                                <a href="#">contact@carpenter.com</a>
-                            </p>
-                            <div class="socail_links">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ti-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ti-twitter-alt"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-pinterest"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-youtube-play"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-md-6 col-lg-2">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Company
-                            </h3>
-                            <ul class="links">
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#"> Gallery</a></li>
-                                <li><a href="#"> Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 col-lg-3">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Popular destination
-                            </h3>
-                            <ul class="links double_links">
-                                <li><a href="#">Indonesia</a></li>
-                                <li><a href="#">America</a></li>
-                                <li><a href="#">India</a></li>
-                                <li><a href="#">Switzerland</a></li>
-                                <li><a href="#">Italy</a></li>
-                                <li><a href="#">Canada</a></li>
-                                <li><a href="#">Franch</a></li>
-                                <li><a href="#">England</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 col-lg-3">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Instagram
-                            </h3>
-                            <div class="instagram_feed">
-                                <div class="single_insta">
-                                    <a href="#">
-                                        <img src="src/provider/img/instagram/1.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="single_insta">
-                                    <a href="#">
-                                        <img src="src/provider/img/instagram/2.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="single_insta">
-                                    <a href="#">
-                                        <img src="src/provider/img/instagram/3.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="single_insta">
-                                    <a href="#">
-                                        <img src="src/provider/img/instagram/4.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="single_insta">
-                                    <a href="#">
-                                        <img src="src/provider/img/instagram/5.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="single_insta">
-                                    <a href="#">
-                                        <img src="src/provider/img/instagram/6.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copy-right_text">
-            <div class="container">
-                <div class="footer_border"></div>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <p class="copy_right text-center">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+									<!-- <div class="col-lg-4 col-md-4">
+												<button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
+											</div>  -->
+								</div>
+								<div class="info"></div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3  col-md-6 col-sm-6">
+					<div class="single-footer-widget mail-chimp">
+						<h6 class="mb-20">Instragram Feed</h6>
+						<ul class="instafeed d-flex flex-wrap">
+							<li><img src="img/i1.jpg" alt=""></li>
+							<li><img src="img/i2.jpg" alt=""></li>
+							<li><img src="img/i3.jpg" alt=""></li>
+							<li><img src="img/i4.jpg" alt=""></li>
+							<li><img src="img/i5.jpg" alt=""></li>
+							<li><img src="img/i6.jpg" alt=""></li>
+							<li><img src="img/i7.jpg" alt=""></li>
+							<li><img src="img/i8.jpg" alt=""></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Follow Us</h6>
+						<p>Let us be social</p>
+						<div class="footer-social d-flex align-items-center">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
+				<p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+</p>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer Area -->
 
-
-  <!-- Modal -->
-  <div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="serch_form">
-            <input type="text" placeholder="Search" >
-            <button type="submit">search</button>
-        </div>
-      </div>
-    </div>
-  </div>
-    <!-- link that opens popup -->
-<!--     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
-
-    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"> </script> -->
-    <!-- JS here -->
-    <script src="src/provider/js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="src/provider/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="src/provider/js/popper.min.js"></script>
-    <script src="src/provider/js/bootstrap.min.js"></script>
-    <script src="src/provider/js/owl.carousel.min.js"></script>
-    <script src="src/provider/js/isotope.pkgd.min.js"></script>
-    <script src="src/provider/js/ajax-form.js"></script>
-    <script src="src/provider/js/waypoints.min.js"></script>
-    <script src="src/provider/js/jquery.counterup.min.js"></script>
-    <script src="src/provider/js/imagesloaded.pkgd.min.js"></script>
-    <script src="src/provider/js/scrollIt.js"></script>
-    <script src="src/provider/js/jquery.scrollUp.min.js"></script>
-    <script src="src/provider/js/wow.min.js"></script>
-    <script src="src/provider/js/nice-select.min.js"></script>
-    <script src="src/provider/js/jquery.slicknav.min.js"></script>
-    <script src="src/provider/js/jquery.magnific-popup.min.js"></script>
-    <script src="src/provider/js/plugins.js"></script>
-    <script src="src/provider/js/gijgo.min.js"></script>
-    <script src="src/provider/js/slick.min.js"></script>
-   
-
-    
-    <!--contact js-->
-    <script src="src/provider/js/contact.js"></script>
-    <script src="src/provider/js/jquery.ajaxchimp.min.js"></script>
-    <script src="src/provider/js/jquery.form.js"></script>
-    <script src="src/provider/js/jquery.validate.min.js"></script>
-    <script src="src/provider/js/mail-script.js"></script>
-
-
-    <script src="src/provider/js/main.js"></script>
-    <script>
-        $('#datepicker').datepicker({
-            iconsLibrary: 'fontawesome',
-            icons: {
-             rightIcon: '<span class="fa fa-caret-down"></span>'
-         }
-        });
-    </script>
+	<script src="js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+	 crossorigin="anonymous"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/nouislider.min.js"></script>
+	<script src="js/countdown.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>
