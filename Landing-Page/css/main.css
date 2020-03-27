@@ -64,9 +64,14 @@ h3 {
 }
 
 .btn {
-  border: 0;
-  border-radius: 0;
+  border-radius: 20px;
+  margin: 2% 12px 0 0; 
+  border-radius: 30px;
+
+  border: 1px solid black;
+    font-weight: bold;
 }
+
 
 .btn.btn-primary:hover {
   background-color: #017fb5;
