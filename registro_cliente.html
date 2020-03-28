@@ -25,6 +25,7 @@
 	<link rel="stylesheet" href="css/nice-select.css">
 	<link rel="stylesheet" href="css/nouislider.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -124,29 +125,22 @@
 	</section>
 	<!-- Fin   la Seccion de Banner  -->
 	<!-- style="background-color: blueviolet;" -->
+
+
 	<!--================ Inicio de la Seccion de Login =================-->
 	<section class="login_box_area section_gap">
-		<!--Blue select-->
-		<select class="mdb-select md-form colorful-select dropdown-primary">
-			<option value="1">Option 1</option>
-			<option value="2">Option 2</option>
-			<option value="3">Option 3</option>
-			<option value="4">Option 4</option>
-			<option value="5">Option 5</option>
-		</select>
-		<label class="mdb-main-label">Blue select</label>
-		<!--/Blue select-->
 		<div class="container">
+
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="login_form_inner">
-
+						
 						<h3>Registrarse como usuario</h3>
 
 						<form class="row login_form col-12 " action="contact_process.php" method="post" id="contactForm"
 							novalidate="novalidate">
 
-
+							<!-- Nombre y apellido -->
 							<div class="row  col-12 form-group">
 								<div class="col-6">
 
@@ -162,8 +156,9 @@
 								</div>
 
 							</div>
+							<!-- ***************************** -->
 
-
+							<!-- Contraseña y corro electronico -->
 							<div class="row col-12 form-group">
 
 								<div class="col-6">
@@ -179,6 +174,9 @@
 										onblur="this.placeholder = 'Correo Electronico'">
 								</div>
 							</div>
+							<!-- ***************************** -->
+
+							<!-- Repetir contraseña y Edad -->
 							<div class="row col-9 form-group">
 
 								<div class="col-8 ">
@@ -192,9 +190,12 @@
 										onblur="this.placeholder = 'Edad'">
 								</div>
 							</div>
+							<!-- ***************************** -->
+							<!-- No se debe poner esta parte en la seccion de los form-group -->
 
+							<!-- incio Radios button de seleccion de genero -->
 							<div class="col-3"
-								style="border-bottom: 2px solid gray;  border-bottom-right-radius: 30px; border-bottom-left-radius: 30px;">
+								style="border-bottom: 2px solid rgba(138, 134, 134, 0.404);  border-bottom-right-radius: 30px; border-bottom-left-radius: 30px;">
 								<div>Genero</div>
 								<div class="form-check form-check-inline ">
 									<input type="radio" class="form-check-input" id="male_user"
@@ -207,11 +208,50 @@
 									<label class="form-check-label" for="woman_user">Mujer</label>
 								</div>
 							</div>
+							<!--Fin de los Radios button de seleccion de genero -->
+							
+							<!-- Pais y ciudad -->
+							<div class="row pt-3 mt-3 col-12 form-group" style="border-top: 2px solid rgba(138, 134, 134, 0.404);">
 
-							<!-- No se debe poner esta parte en la seccion de los form-group -->
-							<div class="row seccionRadio py-4">
-								<div class="col-3"
-									style="border-bottom: 2px solid gray;  border-bottom-right-radius: 30px; border-bottom-left-radius: 30px;">
+								<div class="col-6">
+									<select class="custom-select " id="select-departamentos" size="3"  style=" border-top-left-radius: 20px; border: 2px solid rgba(138, 134, 134, 0.404) ; border-bottom-left-radius: 20px; ">
+										<option value = "0" selected>Seleccionar un Departamento</option>
+										<option value="1">Atlántida</option>
+										<option value="2">Choluteca</option>
+										<option value="3">Colón</option>
+										<option value="4">Comayagua</option>
+										<option value="5">Copán</option>
+										<option value="6">Cortes</option>
+										<option value="7">El Paraíso</option>
+										<option value="8">Francisco Morazán</option>
+										<option value="9">Gracias a Dios</option>
+										<option value="10">Intibucá</option>
+										<option value="11">Islas de la Bahía</option>
+										<option value="12">La Paz</option>
+										<option value="13">Lempira</option>
+										<option value="14">Ocotepeque</option>
+										<option value="15">Olancho</option>
+										<option value="16">Santa Bárbara</option>
+										<option value="17">Valle</option>
+										<option value="18">Yoro</option>
+									</select>
+								</div>
+								<div class="col-6" >
+									<select class="custom-select " id="select-municipio" size="3" style=" border-top-left-radius: 20px; border: 2px solid rgba(138, 134, 134, 0.404) ; border-bottom-left-radius: 20px; " >
+										<option value = "0" selected>Seleccionar un Municipio</option>
+										<option value="1">"Se llenara con JS"</option>
+									</select>
+								</div>
+								
+
+							</div>
+							<!-- ***************************** -->
+
+							<!-- Los Radio button en otra linea -->
+							<div class="row seccionRadio ">
+								<div class="col-12 row pt-3" style="border-top: 2px solid rgba(138, 134, 134, 0.404);">
+									<div class="col-3"
+									style="border: 2px solid rgba(138, 134, 134, 0.404);  border-bottom-right-radius: 30px; border-bottom-left-radius: 30px;">
 									<div>Tipo de tarjeta</div>
 									<div class="form-check form-check-inline ">
 										<input type="radio" class="form-check-input" id="ningunaTarjeta"
@@ -229,25 +269,31 @@
 										<label class="form-check-label" for="visa">Visa</label>
 									</div>
 								</div>
+								<!-- Inicio de Seccion de from-group incrustaos -->
 								<div class="row col-9 form-group">
 
 									<div class="col-6 mx-auto">
-	
-										<input type="text" class="form-control" id="tarejeta-digito" name="tarejeta-digito"
-											placeholder="Ingrese los numeros de la tarjeta" onfocus="this.placeholder = ''"
+
+										<input type="text" class="form-control" id="tarejeta-digito"
+											name="tarejeta-digito" placeholder="Ingrese los numeros de la tarjeta"
+											onfocus="this.placeholder = ''"
 											onblur="this.placeholder = 'Ingrese los numeros de la tarjeta'">
 									</div>
 									<div class="col-5 mx-auto">
-	
+
 										<input type="text" class="form-control" id="pinTarjeta" name="pinTarjeta"
 											placeholder="Ingrese el PIN de la tarjeta" onfocus="this.placeholder = ''"
 											onblur="this.placeholder = 'Ingrese el PIN de la tarjeta'">
 									</div>
-	
-	
+
+
 								</div>
-								<div class="container"
-									style=" border-bottom: 2px solid gray;  border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; padding-left: 00px;">
+								
+								</div>
+								<!-- fin de Seccion de from-group incrustaos -->
+
+								<div class="container mt-2 py-3"
+									style=" border: 2px solid rgba(138, 134, 134, 0.404);  border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; padding-left: 00px;">
 									<div>Seleccione Metodo de pago (al menos uno)</div>
 									<div class="form-check form-check-inline">
 										<input type="checkbox" class="form-check-input" id="paypal"
@@ -290,10 +336,12 @@
 
 							</div>
 							<!-- Fin de la seleccion de Radios button -->
+							
+							
 							<div class="col-md-12 form-group">
 								<div class="creat_account">
-									<input type="checkbox" id="f-option2" name="selector">
-									<label for="f-option2">Mantener sesion iniciada</label>
+									<input type="checkbox" id="terminosCondiciones" name="selector">
+									<label for="terminosCondiciones">Acepto los terminos y condiciones</label>
 								</div>
 							</div>
 							<div class="col-md-12 form-group">

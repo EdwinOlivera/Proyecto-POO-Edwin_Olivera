@@ -14,8 +14,9 @@ $(document).ready(function(){
 
   //------- Active Nice Select --------//
 
-    $('select').niceSelect();
-
+    $('.select-nice').niceSelect(); //Esto afecta a las listas select-content para ponerle tamaño
+    $('#select-departamentos').val(0);
+    $('#seluser').niceSelect('update');
 
     $('.navbar-nav li.dropdown').hover(function() {
     $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
@@ -558,9 +559,5 @@ $(document).ready(function(){
           ]
         });
       }
-
-
-      $('.mdb-select').materialSelect();
-  
 
  });
