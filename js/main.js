@@ -1,7 +1,7 @@
 
-$(document).ready(function(){
-	"use strict";
 
+$(document).ready(function(){
+  "use strict";
 	var window_width 	 = $(window).width(),
 	window_height 		 = window.innerHeight,
 	header_height 		 = $(".default-header").height(),
@@ -560,6 +560,7 @@ $(document).ready(function(){
       }
 
 
+      $('.mdb-select').materialSelect();
   
 
  });

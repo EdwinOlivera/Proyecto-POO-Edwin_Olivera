@@ -52,35 +52,39 @@
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
 									aria-haspopup="true" aria-expanded="false">Tienda</a>
 								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="category.html">Categoria en tienda</a></li>
-									<li class="nav-item "><a class="nav-link" href="single-product.html">Detalles de productos</a></li>
+									<li class="nav-item"><a class="nav-link" href="category.html">Categoria en
+											tienda</a></li>
+									<li class="nav-item "><a class="nav-link" href="single-product.html">Detalles de
+											productos</a></li>
 									<li class="nav-item"><a class="nav-link" href="checkout.html">Realizar Pago</a></li>
 									<li class="nav-item"><a class="nav-link" href="cart.html">Carro de compra</a></li>
-									<li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmar carrito</a>
-										<li class="nav-item"><a class="nav-link" href="tracking.html">Seguimiento de compra</a></li>
-									</li>
-								</ul>
+									<li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmar
+											carrito</a>
+									<li class="nav-item"><a class="nav-link" href="tracking.html">Seguimiento de
+											compra</a></li>
 							</li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-									aria-haspopup="true" aria-expanded="false">Opiniones</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Detalles</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav-item submenu dropdown active">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-									aria-haspopup="true" aria-expanded="false">Secion</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item active"><a class="nav-link" href="login.html">Cliente</a></li>
-									<li class="nav-item active"><a class="nav-link" href="login.html">Empresa</a></li>
-									<li class="nav-item active"><a class="nav-link" href="login.html">Super usuario</a></li>
-									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+						</ul>
+						</li>
+						<li class="nav-item submenu dropdown">
+							<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+								aria-haspopup="true" aria-expanded="false">Opiniones</a>
+							<ul class="dropdown-menu">
+								<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+								<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Detalles</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item submenu dropdown active">
+							<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+								aria-haspopup="true" aria-expanded="false">Secion</a>
+							<ul class="dropdown-menu">
+								<li class="nav-item active"><a class="nav-link" href="login.html">Cliente</a></li>
+								<li class="nav-item active"><a class="nav-link" href="login.html">Empresa</a></li>
+								<li class="nav-item active"><a class="nav-link" href="login.html">Super usuario</a></li>
+								<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+							</ul>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
@@ -119,33 +123,182 @@
 		</div>
 	</section>
 	<!-- Fin   la Seccion de Banner  -->
-
+	<!-- style="background-color: blueviolet;" -->
 	<!--================ Inicio de la Seccion de Login =================-->
 	<section class="login_box_area section_gap">
+		<!--Blue select-->
+		<select class="mdb-select md-form colorful-select dropdown-primary">
+			<option value="1">Option 1</option>
+			<option value="2">Option 2</option>
+			<option value="3">Option 3</option>
+			<option value="4">Option 4</option>
+			<option value="5">Option 5</option>
+		</select>
+		<label class="mdb-main-label">Blue select</label>
+		<!--/Blue select-->
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="login_form_inner">
+
 						<h3>Registrarse como usuario</h3>
-						<form class="row login_form" action="contact_process.php" method="post" id="contactForm"
+
+						<form class="row login_form col-12 " action="contact_process.php" method="post" id="contactForm"
 							novalidate="novalidate">
-							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Nombre de usuario"
-									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nombre de usuario'">
+
+
+							<div class="row  col-12 form-group">
+								<div class="col-6">
+
+									<input type="text" class="form-control" id="name" name="name"
+										placeholder="Nombre de usuario" onfocus="this.placeholder = ''"
+										onblur="this.placeholder = 'Nombre de usuario'">
+								</div>
+								<div class="col-6">
+
+									<input type="text" class="form-control" id="lastName" name="lastName"
+										placeholder="Apellido" onfocus="this.placeholder = ''"
+										onblur="this.placeholder = 'Apellido'">
+								</div>
+
 							</div>
-							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Contraseña"
-									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Contraseña'">
+
+
+							<div class="row col-12 form-group">
+
+								<div class="col-6">
+
+									<input type="password" class="form-control" id="password" name="password"
+										placeholder="Contraseña" onfocus="this.placeholder = ''"
+										onblur="this.placeholder = 'Contraseña'">
+								</div>
+								<div class="col-6">
+
+									<input type="email" class="form-control" id="email-user" name="email-user"
+										placeholder="Correo Electronico" onfocus="this.placeholder = ''"
+										onblur="this.placeholder = 'Correo Electronico'">
+								</div>
 							</div>
+							<div class="row col-9 form-group">
+
+								<div class="col-8 ">
+									<input type="password" class="form-control" id="password" name="password"
+										placeholder="Repita la contraseña" onfocus="this.placeholder = ''"
+										onblur="this.placeholder = 'Repita la contraseña'">
+								</div>
+								<div class="col-2 ">
+									<input type="text" class="form-control" id="edad-user" name="edad-user"
+										placeholder="Edad" onfocus="this.placeholder = ''"
+										onblur="this.placeholder = 'Edad'">
+								</div>
+							</div>
+
+							<div class="col-3"
+								style="border-bottom: 2px solid gray;  border-bottom-right-radius: 30px; border-bottom-left-radius: 30px;">
+								<div>Genero</div>
+								<div class="form-check form-check-inline ">
+									<input type="radio" class="form-check-input" id="male_user"
+										name="materialExampleRadios">
+									<label class="form-check-label" for="male_user">Hombre</label>
+								</div>
+								<div class="form-check  form-check-inline">
+									<input type="radio" class="form-check-input" id="woman_user"
+										name="materialExampleRadios">
+									<label class="form-check-label" for="woman_user">Mujer</label>
+								</div>
+							</div>
+
+							<!-- No se debe poner esta parte en la seccion de los form-group -->
+							<div class="row seccionRadio py-4">
+								<div class="col-3"
+									style="border-bottom: 2px solid gray;  border-bottom-right-radius: 30px; border-bottom-left-radius: 30px;">
+									<div>Tipo de tarjeta</div>
+									<div class="form-check form-check-inline ">
+										<input type="radio" class="form-check-input" id="ningunaTarjeta"
+											name="materialExampleRadios" checked>
+										<label class="form-check-label" for="ningunaTarjeta">Ninguna</label>
+									</div>
+									<div class="form-check form-check-inline ">
+										<input type="radio" class="form-check-input" id="masterCard"
+											name="materialExampleRadios">
+										<label class="form-check-label" for="masterCard">Master Card</label>
+									</div>
+									<div class="form-check  form-check-inline">
+										<input type="radio" class="form-check-input" id="visa"
+											name="materialExampleRadios">
+										<label class="form-check-label" for="visa">Visa</label>
+									</div>
+								</div>
+								<div class="row col-9 form-group">
+
+									<div class="col-6 mx-auto">
+	
+										<input type="text" class="form-control" id="tarejeta-digito" name="tarejeta-digito"
+											placeholder="Ingrese los numeros de la tarjeta" onfocus="this.placeholder = ''"
+											onblur="this.placeholder = 'Ingrese los numeros de la tarjeta'">
+									</div>
+									<div class="col-5 mx-auto">
+	
+										<input type="text" class="form-control" id="pinTarjeta" name="pinTarjeta"
+											placeholder="Ingrese el PIN de la tarjeta" onfocus="this.placeholder = ''"
+											onblur="this.placeholder = 'Ingrese el PIN de la tarjeta'">
+									</div>
+	
+	
+								</div>
+								<div class="container"
+									style=" border-bottom: 2px solid gray;  border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; padding-left: 00px;">
+									<div>Seleccione Metodo de pago (al menos uno)</div>
+									<div class="form-check form-check-inline">
+										<input type="checkbox" class="form-check-input" id="paypal"
+											name="materialExampleRadios">
+										<label class="form-check-label" for="paypal">Pay Pal</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input type="checkbox" class="form-check-input" id="Tarjetas"
+											name="materialExampleRadios">
+										<label class="form-check-label" for="Tarjetas">Tarjetas</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input type="checkbox" class="form-check-input" id="ContraReembolso"
+											name="materialExampleRadios">
+										<label class="form-check-label" for="ContraReembolso">Contra reembolso</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input type="checkbox" class="form-check-input" id="transferenciasBancarias"
+											name="materialExampleRadios">
+										<label class="form-check-label" for="transferenciasBancarias">Transferencias
+											bancarias</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input type="checkbox" class="form-check-input" id="pagosCelulares"
+											name="materialExampleRadios">
+										<label class="form-check-label" for="pagosCelulares">Pagos mediante
+											celulares</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input type="checkbox" class="form-check-input" id="monedaVirtual"
+											name="materialExampleRadios">
+										<label class="form-check-label" for="monedaVirtual">Moneda virtual</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input type="checkbox" class="form-check-input" id="bancosOnline"
+											name="materialExampleRadios">
+										<label class="form-check-label" for="bancosOnline">Bancos online</label>
+									</div>
+								</div>
+
+							</div>
+							<!-- Fin de la seleccion de Radios button -->
 							<div class="col-md-12 form-group">
 								<div class="creat_account">
 									<input type="checkbox" id="f-option2" name="selector">
-									<label for="f-option2">Keep me logged in</label>
+									<label for="f-option2">Mantener sesion iniciada</label>
 								</div>
 							</div>
 							<div class="col-md-12 form-group">
-								<button type="submit" value="submit" class="primary-btn">Log In</button>
-								<a href="#">Forgot Password?</a>
+								<button type="submit" value="submit" class="primary-btn">Registrarse</button>
+								<a href="#">¿Hás olvidado tú contraseña?</a>
 							</div>
 						</form>
 					</div>
