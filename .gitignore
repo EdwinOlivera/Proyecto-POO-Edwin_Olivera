@@ -18,3 +18,4 @@ prepros-6.config
 .history
 
 # End of https://www.gitignore.io/api/prepros,visualstudiocode
+/vendor/

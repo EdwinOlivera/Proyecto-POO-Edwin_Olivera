@@ -1,0 +1,12 @@
+{
+    "name": "edwin/proyecto-poo",
+    "authors": [
+        {
+            "name": "Edwin Olivera",
+            "email": "36614051+EdwinOlivera@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "kreait/firebase-php": "^5.0"
+    }
+}
