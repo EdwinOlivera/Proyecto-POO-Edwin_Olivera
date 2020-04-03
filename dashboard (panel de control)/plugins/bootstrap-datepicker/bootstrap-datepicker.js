@@ -125,7 +125,7 @@
 
 		this.setStartDate(this._o.startDate);
 		this.setEndDate(this._o.endDate);
-		this.setDaysOfWeekDisabled(this.o.daysOfWeekDisabled);
+		this.setDiasOfWeekDisabled(this.o.DiasOfWeekDisabled);
 
 		this.fillDow();
 		this.fillMonths();
@@ -224,10 +224,10 @@
 				}
 			}
 
-			o.daysOfWeekDisabled = o.daysOfWeekDisabled||[];
-			if (!$.isArray(o.daysOfWeekDisabled))
-				o.daysOfWeekDisabled = o.daysOfWeekDisabled.split(/[,\s]*/);
-			o.daysOfWeekDisabled = $.map(o.daysOfWeekDisabled, function(d){
+			o.DiasOfWeekDisabled = o.DiasOfWeekDisabled||[];
+			if (!$.isArray(o.DiasOfWeekDisabled))
+				o.DiasOfWeekDisabled = o.DiasOfWeekDisabled.split(/[,\s]*/);
+			o.DiasOfWeekDisabled = $.map(o.DiasOfWeekDisabled, function(d){
 				return parseInt(d, 10);
 			});
 
@@ -531,8 +531,8 @@
 			this.updateNavArrows();
 		},
 
-		setDaysOfWeekDisabled: function(daysOfWeekDisabled){
-			this._process_options({daysOfWeekDisabled: daysOfWeekDisabled});
+		setDiasOfWeekDisabled: function(DiasOfWeekDisabled){
+			this._process_options({DiasOfWeekDisabled: DiasOfWeekDisabled});
 			this.update();
 			this.updateNavArrows();
 		},
@@ -672,13 +672,13 @@
 			if (this.o.calendarWeeks){
 				var cell = '<th class="cw">&nbsp;</th>';
 				html += cell;
-				this.picker.find('.datepicker-days thead tr:first-child').prepend(cell);
+				this.picker.find('.datepicker-Dias thead tr:first-child').prepend(cell);
 			}
 			while (dowCnt < this.o.weekStart + 7){
-				html += '<th class="dow">'+dates[this.o.language].daysMin[(dowCnt++)%7]+'</th>';
+				html += '<th class="dow">'+dates[this.o.language].DiasMin[(dowCnt++)%7]+'</th>';
 			}
 			html += '</tr>';
-			this.picker.find('.datepicker-days thead').append(html);
+			this.picker.find('.datepicker-Dias thead').append(html);
 		},
 
 		fillMonths: function(){
@@ -723,7 +723,7 @@
 			if (this.dates.contains(date) !== -1)
 				cls.push('active');
 			if (date.valueOf() < this.o.startDate || date.valueOf() > this.o.endDate ||
-				$.inArray(date.getUTCDay(), this.o.daysOfWeekDisabled) !== -1){
+				$.inArray(date.getUTCDay(), this.o.DiasOfWeekDisabled) !== -1){
 				cls.push('disabled');
 			}
 			if (this.range){
@@ -749,7 +749,7 @@
 				cleartxt = dates[this.o.language].clear || dates['en'].clear || '',
 				tooltip;
 			if (isNaN(year) || isNaN(month)) return;
-			this.picker.find('.datepicker-days thead th.datepicker-switch')
+			this.picker.find('.datepicker-Dias thead th.datepicker-switch')
 						.text(dates[this.o.language].months[month]+' '+year);
 			this.picker.find('tfoot th.today')
 						.text(todaytxt)
@@ -760,7 +760,7 @@
 			this.updateNavArrows();
 			this.fillMonths();
 			var prevMonth = UTCDate(year, month-1, 28),
-				day = DPGlobal.getDaysInMonth(prevMonth.getUTCFullYear(), prevMonth.getUTCMonth());
+				day = DPGlobal.getDiasInMonth(prevMonth.getUTCFullYear(), prevMonth.getUTCMonth());
 			prevMonth.setUTCDate(day);
 			prevMonth.setUTCDate(day - (prevMonth.getUTCDay() - this.o.weekStart + 7)%7);
 			var nextMonth = new Date(prevMonth);
@@ -781,7 +781,7 @@
 							th = new Date(Number(ws) + (7 + 4 - ws.getUTCDay()) % 7 * 864e5),
 							// First Thursday of year, year from thursday
 							yth = new Date(Number(yth = UTCDate(th.getUTCFullYear(), 0, 1)) + (7 + 4 - yth.getUTCDay())%7*864e5),
-							// Calendar week: ms between thursdays, div ms per day, div 7 days
+							// Calendar week: ms between thursDias, div ms per day, div 7 Dias
 							calWeek =  (th - yth) / 864e5 / 7 + 1;
 						html.push('<td class="cw">'+ calWeek +'</td>');
 
@@ -814,7 +814,7 @@
 				}
 				prevMonth.setUTCDate(prevMonth.getUTCDate()+1);
 			}
-			this.picker.find('.datepicker-days tbody').empty().append(html.join(''));
+			this.picker.find('.datepicker-Dias tbody').empty().append(html.join(''));
 
 			var months = this.picker.find('.datepicker-months')
 						.find('th:eq(1)')
@@ -1403,7 +1403,7 @@
 		beforeShowDay: $.noop,
 		calendarWeeks: false,
 		clearBtn: false,
-		daysOfWeekDisabled: [],
+		DiasOfWeekDisabled: [],
 		endDate: Infinity,
 		forceParse: true,
 		format: 'mm/dd/yyyy',
@@ -1428,9 +1428,9 @@
 	$.fn.datepicker.Constructor = Datepicker;
 	var dates = $.fn.datepicker.dates = {
 		en: {
-			days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-			daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-			daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+			Dias: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+			DiasShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+			DiasMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
 			months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
 			monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
 			today: "Today",
@@ -1441,7 +1441,7 @@
 	var DPGlobal = {
 		modes: [
 			{
-				clsName: 'days',
+				clsName: 'Dias',
 				navFnc: 'Month',
 				navStep: 1
 			},
@@ -1458,7 +1458,7 @@
 		isLeapYear: function(year){
 			return (((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0));
 		},
-		getDaysInMonth: function(year, month){
+		getDiasInMonth: function(year, month){
 			return [31, (DPGlobal.isLeapYear(year) ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month];
 		},
 		validParts: /dd?|DD?|mm?|MM?|yy(?:yy)?/g,
@@ -1587,8 +1587,8 @@
 				format = DPGlobal.parseFormat(format);
 			var val = {
 				d: date.getUTCDate(),
-				D: dates[language].daysShort[date.getUTCDay()],
-				DD: dates[language].days[date.getUTCDay()],
+				D: dates[language].DiasShort[date.getUTCDay()],
+				DD: dates[language].Dias[date.getUTCDay()],
 				m: date.getUTCMonth() + 1,
 				M: dates[language].monthsShort[date.getUTCMonth()],
 				MM: dates[language].months[date.getUTCMonth()],
@@ -1624,7 +1624,7 @@
 						'</tfoot>'
 	};
 	DPGlobal.template = '<div class="datepicker">'+
-							'<div class="datepicker-days">'+
+							'<div class="datepicker-Dias">'+
 								'<table class="table">'+
 									DPGlobal.headTemplate+
 									'<tbody></tbody>'+

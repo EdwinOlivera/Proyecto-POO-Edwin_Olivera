@@ -635,7 +635,7 @@
 				@extend .p1-gradient-color;
 			}
 		}
-		.price {
+		.Precio {
 			font-weight: 700;
 			color: $title-color;
 			span {
@@ -693,7 +693,7 @@
 		left: 0;
 		@include transition (all .3s linear);
 	}
-	.price {
+	.Precio {
 		margin-top: 10px;
 		margin-bottom: 5px;
 		del {
@@ -997,7 +997,7 @@
 				@extend .p1-gradient-color;
 			}
 		}
-		.price {
+		.Precio {
 			font-weight: 700;
 			color: $title-color;
 			span {
@@ -1272,7 +1272,7 @@
 			}
 		}
 	}
-	.price-wrap {
+	.Precio-wrap {
 		position: relative;
 		z-index: 2;
 		padding: 10px 0;
@@ -1284,7 +1284,7 @@
 				color: #44b253;
 			}
 		}
-		.price {
+		.Precio {
 			font-size: 24px;
 			font-weight: 700;
 			color: $title-color;
@@ -1293,7 +1293,7 @@
 		.view-btn {
 			width: 100%;
 		}
-		.compare {
+		.Comparar {
 			margin-top: 20px;
 			p {
 				i {
@@ -1346,17 +1346,17 @@
 				}
 			}
 		}
-		.price-wrap {
+		.Precio-wrap {
 			.avalability {
 				color: $white;
 				span {
 					color: $white;
 				}
 			}
-			.price {
+			.Precio {
 				color: $white;
 			}
-			.compare {
+			.Comparar {
 				p {
 					i {
 						color: $white;
@@ -1556,8 +1556,8 @@
 
 //--------- End Product Filter ---------//
 
-//--------- Start Price Range Area noUiSlider ----------//
-.price-range-area {
+//--------- Start Precio Range Area noUiSlider ----------//
+.Precio-range-area {
 	padding: 30px 30px 0 30px;
 	.noUi-target {
 		background: #eee;
@@ -1602,13 +1602,13 @@
 			margin: 0 5px;
 		}
 	}
-	.price {
+	.Precio {
 		margin-right: 5px;
 		color: $text-color;
 	}
 }
 
-//--------- End Price Range Area noUiSlider ----------//
+//--------- End Precio Range Area noUiSlider ----------//
 
 
 

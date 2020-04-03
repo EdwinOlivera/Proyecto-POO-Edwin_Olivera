@@ -277,7 +277,7 @@
 	{
 		// A faster unique method is to use object keys to identify used values,
 		// but this doesn't work with arrays or objects, which we must also
-		// consider. See jsperf.com/compare-array-unique-versions/4 for more
+		// consider. See jsperf.com/Comparar-array-unique-versions/4 for more
 		// information.
 		var
 			out = [],
@@ -10743,7 +10743,7 @@
 		 * has elapsed the state will be returned to the default.
 		 * Value is given in seconds.
 		 *  @type int
-		 *  @default 7200 <i>(2 hours)</i>
+		 *  @default 7200 <i>(2 Horas)</i>
 		 *
 		 *  @dtopt Options
 		 *  @name DataTable.defaults.stateDuration
@@ -12022,27 +12022,27 @@
 		 *
 		 *  @example
 		 *    // Using `data` as a function to provide different information for
-		 *    // sorting, filtering and display. In this case, currency (price)
+		 *    // sorting, filtering and display. In this case, currency (Precio)
 		 *    $(document).ready( function() {
 		 *      $('#example').dataTable( {
 		 *        "columnDefs": [ {
 		 *          "targets": [ 0 ],
 		 *          "data": function ( source, type, val ) {
 		 *            if (type === 'set') {
-		 *              source.price = val;
+		 *              source.Precio = val;
 		 *              // Store the computed dislay and filter values for efficiency
-		 *              source.price_display = val=="" ? "" : "$"+numberFormat(val);
-		 *              source.price_filter  = val=="" ? "" : "$"+numberFormat(val)+" "+val;
+		 *              source.Precio_display = val=="" ? "" : "$"+numberFormat(val);
+		 *              source.Precio_filter  = val=="" ? "" : "$"+numberFormat(val)+" "+val;
 		 *              return;
 		 *            }
 		 *            else if (type === 'display') {
-		 *              return source.price_display;
+		 *              return source.Precio_display;
 		 *            }
 		 *            else if (type === 'filter') {
-		 *              return source.price_filter;
+		 *              return source.Precio_filter;
 		 *            }
 		 *            // 'sort', 'type' and undefined all just use the integer
-		 *            return source.price;
+		 *            return source.Precio;
 		 *          }
 		 *        } ]
 		 *      } );
@@ -12832,7 +12832,7 @@
 	
 		/**
 		 * Store the applied global search information in case we want to force a
-		 * research or compare the old search to a new one.
+		 * research or Comparar the old search to a new one.
 		 * Note that this parameter will be set by the initialisation routine. To
 		 * set a default use {@link DataTable.defaults}.
 		 *  @namespace
@@ -13820,8 +13820,8 @@
 			 * `{type}-asc` and `{type}-desc`: Functions are typical Javascript sort
 			 * functions, taking two parameters:
 			 *
-		     *  1. `{*}` Data to compare to the second parameter
-		     *  2. `{*}` Data to compare to the first parameter
+		     *  1. `{*}` Data to Comparar to the second parameter
+		     *  2. `{*}` Data to Comparar to the first parameter
 			 *
 			 * And returning:
 			 *

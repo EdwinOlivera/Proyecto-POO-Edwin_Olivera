@@ -4474,15 +4474,15 @@
 		 * Create a new cookie with a value to store the state of a table
 		 *  @param {string} sName name of the cookie to create
 		 *  @param {string} sValue the value the cookie should take
-		 *  @param {int} iSecs duration of the cookie
+		 *  @param {int} iSec duration of the cookie
 		 *  @param {string} sBaseName sName is made up of the base + file name - this is the base
 		 *  @param {function} fnCallback User definable function to modify the cookie
 		 *  @memberof DataTable#oApi
 		 */
-		function _fnCreateCookie ( sName, sValue, iSecs, sBaseName, fnCallback )
+		function _fnCreateCookie ( sName, sValue, iSec, sBaseName, fnCallback )
 		{
 			var date = new Date();
-			date.setTime( date.getTime()+(iSecs*1000) );
+			date.setTime( date.getTime()+(iSec*1000) );
 			
 			/* 
 			 * Shocking but true - it would appear IE has major issues with having the path not having
@@ -7381,8 +7381,8 @@
 	     *     <li>
 	     *       Function input parameters:
 	     *       <ul>
-		 *         <li>{*} Data to compare to the second parameter</li>
-		 *         <li>{*} Data to compare to the first parameter</li>
+		 *         <li>{*} Data to Comparar to the second parameter</li>
+		 *         <li>{*} Data to Comparar to the first parameter</li>
 	     *       </ul>
 	     *     </li>
 		 *     <li>
@@ -8966,7 +8966,7 @@
 		 * Duration of the cookie which is used for storing session information. This
 		 * value is given in seconds.
 		 *  @type int
-		 *  @default 7200 <i>(2 hours)</i>
+		 *  @default 7200 <i>(2 Horas)</i>
 		 *  @dtopt Options
 		 * 
 		 *  @example
@@ -10115,27 +10115,27 @@
 		 * 
 		 *  @example
 		 *    // Using mData as a function to provide different information for
-		 *    // sorting, filtering and display. In this case, currency (price)
+		 *    // sorting, filtering and display. In this case, currency (Precio)
 		 *    $(document).ready( function() {
 		 *      var oTable = $('#example').dataTable( {
 		 *        "aoColumnDefs": [ {
 		 *          "aTargets": [ 0 ],
 		 *          "mData": function ( source, type, val ) {
 		 *            if (type === 'set') {
-		 *              source.price = val;
+		 *              source.Precio = val;
 		 *              // Store the computed dislay and filter values for efficiency
-		 *              source.price_display = val=="" ? "" : "$"+numberFormat(val);
-		 *              source.price_filter  = val=="" ? "" : "$"+numberFormat(val)+" "+val;
+		 *              source.Precio_display = val=="" ? "" : "$"+numberFormat(val);
+		 *              source.Precio_filter  = val=="" ? "" : "$"+numberFormat(val)+" "+val;
 		 *              return;
 		 *            }
 		 *            else if (type === 'display') {
-		 *              return source.price_display;
+		 *              return source.Precio_display;
 		 *            }
 		 *            else if (type === 'filter') {
-		 *              return source.price_filter;
+		 *              return source.Precio_filter;
 		 *            }
 		 *            // 'sort', 'type' and undefined all just use the integer
-		 *            return source.price;
+		 *            return source.Precio;
 		 *          }
 		 *        } ]
 		 *      } );
@@ -10844,7 +10844,7 @@
 		
 		/**
 		 * Store the applied global search information in case we want to force a 
-		 * research or compare the old search to a new one.
+		 * research or Comparar the old search to a new one.
 		 * Note that this parameter will be set by the initialisation routine. To
 		 * set a default use {@link DataTable.defaults}.
 		 *  @namespace

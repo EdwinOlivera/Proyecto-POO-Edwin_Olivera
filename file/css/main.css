@@ -54,7 +54,7 @@
 
 /* Start Gradient Area css
 ============================================================================================ */
-.gradient-bg, .primary-btn, .add-bag .add-btn, .single-product .product-details .prd-bottom .social-info span:after, .grid-btn:hover, .list-btn:hover, .grid-btn.active, .list-btn.active, .pagination a.active, .pagination a:hover, .s_Product_carousel .owl-dots div.active, .s_product_text .card_area .icon_btn:after, .product_description_area .nav.nav-tabs li a.active, .blog-pagination .page-item.active .page-link, .single-footer-widget .click-btn {
+.gradient-bg, .primary-btn, .add-bolsa .add-btn, .single-product .product-details .prd-bottom .social-info span:after, .grid-btn:hover, .list-btn:hover, .grid-btn.active, .list-btn.active, .pagination a.active, .pagination a:hover, .s_Product_carousel .owl-dots div.active, .s_product_text .card_area .icon_btn:after, .product_description_area .nav.nav-tabs li a.active, .blog-pagination .page-item.active .page-link, .single-footer-widget .click-btn {
   background: -webkit-linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
   background: -moz-linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
   background: -o-linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
@@ -1257,16 +1257,16 @@ h1, h2, h3, h4, h5, h6 {
     .banner-area .banner-img {
       display: none; } }
 
-.add-bag {
+.add-bolsa {
   margin-top: 30px; }
-  .add-bag .add-btn {
+  .add-bolsa .add-btn {
     height: 50px;
     width: 50px;
     line-height: 52px;
     text-align: center;
     border-radius: 50%;
     box-shadow: 0 10px 20px rgba(255, 108, 0, 0.2); }
-    .add-bag .add-btn span {
+    .add-bolsa .add-btn span {
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
@@ -1274,7 +1274,7 @@ h1, h2, h3, h4, h5, h6 {
       transform: rotate(45deg);
       display: inline-block;
       color: #fff; }
-  .add-bag .add-text {
+  .add-bolsa .add-text {
     padding-left: 15px;
     font-size: 12px;
     font-family: "Poppins", sans-serif;
@@ -1334,7 +1334,7 @@ h1, h2, h3, h4, h5, h6 {
   background-image: -webkit-linear-gradient(45deg, #f6463d 0%, #f6398d 45%, #f52cdc 100%);
   background-image: -ms-linear-gradient(45deg, #f6463d 0%, #f6398d 45%, #f52cdc 100%); }
 
-.p1-gradient-color, .organic-body .quick-view-content .price span, .organic-body .quick-view-content .category span, .organic-body .quick-view-content .view-full, .organic-product-top .single-product-top:hover .product-title, .tab-navigation .nav-link:hover, .tab-navigation .nav-link.active, .mini-cart-2a.mini-cart-1 .middle h5 a:hover, .mini-cart-2a.mini-cart-1 .cross span:hover, .mini-cart-2a.mini-cart-2 .middle h5 a:hover, .mini-cart-2a.mini-cart-2 .cross span:hover, .mini-cart-2a.mini-cart-3 .middle h5 a:hover, .mini-cart-2a.mini-cart-3 .cross span:hover, .mini-cart-2a.mini-cart-4 .middle h5 a:hover, .mini-cart-2a.mini-cart-4 .cross span:hover, .mini-cart.mini-cart-1 .middle h5 a:hover, .mini-cart.mini-cart-1 .cross span:hover, .mini-cart.mini-cart-2 .middle h5 a:hover, .mini-cart.mini-cart-2 .cross span:hover, .mini-cart.mini-cart-3 .middle h5 a:hover, .mini-cart.mini-cart-3 .cross span:hover, .mini-cart.mini-cart-4 .middle h5 a:hover, .mini-cart.mini-cart-4 .cross span:hover, .single-search-product .desc .title:hover, .single-sidebar-product .desc .title:hover {
+.p1-gradient-color, .organic-body .quick-view-content .Precio span, .organic-body .quick-view-content .category span, .organic-body .quick-view-content .view-full, .organic-product-top .single-product-top:hover .product-title, .tab-navigation .nav-link:hover, .tab-navigation .nav-link.active, .mini-cart-2a.mini-cart-1 .middle h5 a:hover, .mini-cart-2a.mini-cart-1 .cross span:hover, .mini-cart-2a.mini-cart-2 .middle h5 a:hover, .mini-cart-2a.mini-cart-2 .cross span:hover, .mini-cart-2a.mini-cart-3 .middle h5 a:hover, .mini-cart-2a.mini-cart-3 .cross span:hover, .mini-cart-2a.mini-cart-4 .middle h5 a:hover, .mini-cart-2a.mini-cart-4 .cross span:hover, .mini-cart.mini-cart-1 .middle h5 a:hover, .mini-cart.mini-cart-1 .cross span:hover, .mini-cart.mini-cart-2 .middle h5 a:hover, .mini-cart.mini-cart-2 .cross span:hover, .mini-cart.mini-cart-3 .middle h5 a:hover, .mini-cart.mini-cart-3 .cross span:hover, .mini-cart.mini-cart-4 .middle h5 a:hover, .mini-cart.mini-cart-4 .cross span:hover, .single-search-product .desc .title:hover, .single-sidebar-product .desc .title:hover {
   background: -moz-linear-gradient(45deg, #f6463d 0%, #f6398d 45%, #f52cdc 100%);
   background: -webkit-linear-gradient(45deg, #f6463d 0%, #f6398d 45%, #f52cdc 100%);
   background: -ms-linear-gradient(45deg, #f6463d 0%, #f6398d 45%, #f52cdc 100%);
@@ -1510,12 +1510,12 @@ h1, h2, h3, h4, h5, h6 {
   .single-product .product-details h6 {
     font-size: 16px;
     text-transform: uppercase; }
-  .single-product .product-details .price h6 {
+  .single-product .product-details .Precio h6 {
     font-size: 14px;
     display: inline-block;
     padding-right: 15px;
     margin: 0; }
-  .single-product .product-details .price .l-through {
+  .single-product .product-details .Precio .l-through {
     text-decoration: line-through;
     color: #cccccc;
     margin-bottom: 0; }
@@ -1694,22 +1694,22 @@ h1, h2, h3, h4, h5, h6 {
     .exclusive-deal-area .exclusive-right .product-details h4 {
       font-size: 24px;
       text-transform: uppercase; }
-    .exclusive-deal-area .exclusive-right .product-details .price h6 {
+    .exclusive-deal-area .exclusive-right .product-details .Precio h6 {
       font-size: 14px;
       display: inline-block;
       padding-right: 15px;
       margin-bottom: 15px; }
-    .exclusive-deal-area .exclusive-right .product-details .price .l-through {
+    .exclusive-deal-area .exclusive-right .product-details .Precio .l-through {
       text-decoration: line-through;
       color: #cccccc;
       margin-bottom: 0; }
-    .exclusive-deal-area .exclusive-right .product-details .add-bag {
+    .exclusive-deal-area .exclusive-right .product-details .add-bolsa {
       margin: 30px 0; }
-      .exclusive-deal-area .exclusive-right .product-details .add-bag .add-btn {
+      .exclusive-deal-area .exclusive-right .product-details .add-bolsa .add-btn {
         height: 30px;
         width: 30px;
         line-height: 32px; }
-        .exclusive-deal-area .exclusive-right .product-details .add-bag .add-btn span {
+        .exclusive-deal-area .exclusive-right .product-details .add-bolsa .add-btn span {
           transform: rotate(0deg); }
 
 @media (max-width: 767px) {
@@ -1735,12 +1735,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease 0s; }
   .single-related-product .desc {
     margin: 10px 0px 10px 15px; }
-  .single-related-product .price h6 {
+  .single-related-product .Precio h6 {
     font-size: 14px;
     display: inline-block;
     padding-right: 10px;
     margin-bottom: 0px; }
-  .single-related-product .price .l-through {
+  .single-related-product .Precio .l-through {
     text-decoration: line-through;
     color: #cccccc;
     margin-bottom: 0; }
@@ -2064,7 +2064,7 @@ label {
       color: #000;
       margin-left: 30px;
       font-weight: 400; }
-  .cart-single-item .price,
+  .cart-single-item .Precio,
   .cart-single-item .total {
     font-size: 18px;
     font-weight: 500;
@@ -2684,12 +2684,12 @@ label {
       background: -webkit-linear-gradient(-180deg, #555555, #555555);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; }
-    .single-search-product .desc .price {
+    .single-search-product .desc .Precio {
       font-weight: 700;
       color: #222222; }
-      .single-search-product .desc .price span {
+      .single-search-product .desc .Precio span {
         font-weight: 700; }
-      .single-search-product .desc .price del {
+      .single-search-product .desc .Precio del {
         font-size: 12px;
         color: #cccccc;
         font-weight: 400; }
@@ -2735,10 +2735,10 @@ label {
     -moz-transition: all 0.3s linear;
     -o-transition: all 0.3s linear;
     transition: all 0.3s linear; }
-  .single-organic-product .price {
+  .single-organic-product .Precio {
     margin-top: 10px;
     margin-bottom: 5px; }
-    .single-organic-product .price del {
+    .single-organic-product .Precio del {
       font-size: 14px;
       color: #cccccc;
       font-weight: 400; }
@@ -3009,12 +3009,12 @@ label {
       background: -webkit-linear-gradient(-180deg, #555555, #555555);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; }
-    .single-sidebar-product .desc .price {
+    .single-sidebar-product .desc .Precio {
       font-weight: 700;
       color: #222222; }
-      .single-sidebar-product .desc .price span {
+      .single-sidebar-product .desc .Precio span {
         font-weight: 700; }
-      .single-sidebar-product .desc .price del {
+      .single-sidebar-product .desc .Precio del {
         font-size: 12px;
         color: #cccccc;
         font-weight: 400; }
@@ -3225,26 +3225,26 @@ label {
       .single-organic-product-list .product-details .collect-info li i {
         color: #44b253;
         margin-right: 10px; }
-  .single-organic-product-list .price-wrap {
+  .single-organic-product-list .Precio-wrap {
     position: relative;
     z-index: 2;
     padding: 10px 0; }
-    .single-organic-product-list .price-wrap .avalability {
+    .single-organic-product-list .Precio-wrap .avalability {
       margin-bottom: 0px;
       border-bottom: 1px solid #eee;
       padding-bottom: 3px; }
-      .single-organic-product-list .price-wrap .avalability span {
+      .single-organic-product-list .Precio-wrap .avalability span {
         color: #44b253; }
-    .single-organic-product-list .price-wrap .price {
+    .single-organic-product-list .Precio-wrap .Precio {
       font-size: 24px;
       font-weight: 700;
       color: #222222;
       margin: 25px 0; }
-    .single-organic-product-list .price-wrap .view-btn {
+    .single-organic-product-list .Precio-wrap .view-btn {
       width: 100%; }
-    .single-organic-product-list .price-wrap .compare {
+    .single-organic-product-list .Precio-wrap .Comparar {
       margin-top: 20px; }
-      .single-organic-product-list .price-wrap .compare p i {
+      .single-organic-product-list .Precio-wrap .Comparar p i {
         margin-right: 10px; }
   .single-organic-product-list:after {
     content: "";
@@ -3278,15 +3278,15 @@ label {
       color: #fff; }
       .single-organic-product-list:hover .product-details .collect-info li i {
         color: #fff; }
-    .single-organic-product-list:hover .price-wrap .avalability {
+    .single-organic-product-list:hover .Precio-wrap .avalability {
       color: #fff; }
-      .single-organic-product-list:hover .price-wrap .avalability span {
+      .single-organic-product-list:hover .Precio-wrap .avalability span {
         color: #fff; }
-    .single-organic-product-list:hover .price-wrap .price {
+    .single-organic-product-list:hover .Precio-wrap .Precio {
       color: #fff; }
-    .single-organic-product-list:hover .price-wrap .compare p {
+    .single-organic-product-list:hover .Precio-wrap .Comparar p {
       color: #fff; }
-      .single-organic-product-list:hover .price-wrap .compare p i {
+      .single-organic-product-list:hover .Precio-wrap .Comparar p i {
         color: #fff; }
 
 .sidebar-categories .head {
@@ -3440,20 +3440,20 @@ label {
 .pixel-radio::after {
   border-radius: 50%; }
 
-.price-range-area {
+.Precio-range-area {
   padding: 30px 30px 0 30px; }
-  .price-range-area .noUi-target {
+  .Precio-range-area .noUi-target {
     background: #eee;
     border-radius: 0px;
     border: 0px;
     box-shadow: none; }
-  .price-range-area .noUi-horizontal {
+  .Precio-range-area .noUi-horizontal {
     height: 6px; }
-  .price-range-area .noUi-connect {
+  .Precio-range-area .noUi-connect {
     background: #eee;
     border-radius: 0px;
     box-shadow: none; }
-  .price-range-area .noUi-horizontal .noUi-handle {
+  .Precio-range-area .noUi-horizontal .noUi-handle {
     width: 16px;
     height: 16px;
     left: -8px;
@@ -3467,19 +3467,19 @@ label {
     -moz-transition: ease 0.1s;
     -o-transition: ease 0.1s;
     transition: ease 0.1s; }
-    .price-range-area .noUi-horizontal .noUi-handle:focus {
+    .Precio-range-area .noUi-horizontal .noUi-handle:focus {
       outline: none; }
-    .price-range-area .noUi-horizontal .noUi-handle:hover {
+    .Precio-range-area .noUi-horizontal .noUi-handle:hover {
       border: 3px solid #ffba00;
       background: #fff; }
-  .price-range-area .noUi-handle::after, .price-range-area .noUi-handle::before {
+  .Precio-range-area .noUi-handle::after, .Precio-range-area .noUi-handle::before {
     display: none; }
-  .price-range-area .value-wrapper {
+  .Precio-range-area .value-wrapper {
     margin-top: 20px;
     color: #cccccc; }
-    .price-range-area .value-wrapper .to {
+    .Precio-range-area .value-wrapper .to {
       margin: 0 5px; }
-  .price-range-area .price {
+  .Precio-range-area .Precio {
     margin-right: 5px;
     color: #777777; }
 

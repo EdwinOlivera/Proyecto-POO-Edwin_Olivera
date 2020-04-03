@@ -61,7 +61,7 @@ body .fc { /* extra precedence to overcome jqui */
 	filter: alpha(opacity=30); /* for IE */
 }
 
-.fc-nonbusiness { /* default look for non-business-hours areas */
+.fc-nonbusiness { /* default look for non-business-Horas areas */
 	/* will inherit .fc-bgevent's styles */
 	background: #ccc;
 }
@@ -736,7 +736,7 @@ a.fc-more:hover {
 
 .fc-agenda-view .fc-day-grid .fc-row .fc-content-skeleton {
 	padding-top: 1px; /* add a pixel to make sure there are 2px padding above events */
-	padding-bottom: 1em; /* give space underneath events for clicking/selecting days */
+	padding-bottom: 1em; /* give space underneath events for clicking/selecting Dias */
 }
 
 

@@ -89,7 +89,7 @@ Rickshaw.Fixtures.Time.Local = function() {
 			rounded.setMilliseconds(0);
 			rounded.setSeconds(0);
 			rounded.setMinutes(0);
-			rounded.setHours(0);
+			rounded.setHoras(0);
 
 			return rounded.getTime() / 1000;
 		}

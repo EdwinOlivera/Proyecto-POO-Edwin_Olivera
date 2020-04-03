@@ -1075,7 +1075,7 @@ function getOffsets( offsets, width, height ) {
 	];
 }
 
-function parseCss( element, property ) {
+function parSecs( element, property ) {
 	return parseInt( $.css( element, property ), 10 ) || 0;
 }
 
@@ -1250,10 +1250,10 @@ $.fn.position = function( options ) {
 			elem = $( this ),
 			elemWidth = elem.outerWidth(),
 			elemHeight = elem.outerHeight(),
-			marginLeft = parseCss( this, "marginLeft" ),
-			marginTop = parseCss( this, "marginTop" ),
-			collisionWidth = elemWidth + marginLeft + parseCss( this, "marginRight" ) + scrollInfo.width,
-			collisionHeight = elemHeight + marginTop + parseCss( this, "marginBottom" ) + scrollInfo.height,
+			marginLeft = parSecs( this, "marginLeft" ),
+			marginTop = parSecs( this, "marginTop" ),
+			collisionWidth = elemWidth + marginLeft + parSecs( this, "marginRight" ) + scrollInfo.width,
+			collisionHeight = elemHeight + marginTop + parSecs( this, "marginBottom" ) + scrollInfo.height,
 			position = $.extend( {}, basePosition ),
 			myOffset = getOffsets( offsets.my, elem.outerWidth(), elem.outerHeight() );
 
@@ -3822,7 +3822,7 @@ function Datepicker() {
 	this._disableClass = "ui-datepicker-disabled"; // The name of the disabled covering marker class
 	this._unselectableClass = "ui-datepicker-unselectable"; // The name of the unselectable cell marker class
 	this._currentClass = "ui-datepicker-current-day"; // The name of the current day marker class
-	this._dayOverClass = "ui-datepicker-days-cell-over"; // The name of the day hover marker class
+	this._dayOverClass = "ui-datepicker-Dias-cell-over"; // The name of the day hover marker class
 	this.regional = []; // Available regional settings, indexed by language code
 	this.regional[""] = { // Default regional settings
 		closeText: "Done", // Display text for close link
@@ -3834,7 +3834,7 @@ function Datepicker() {
 		monthNamesShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], // For formatting
 		dayNames: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], // For formatting
 		dayNamesShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], // For formatting
-		dayNamesMin: ["Su","Mo","Tu","We","Th","Fr","Sa"], // Column headings for days starting at Sunday
+		dayNamesMin: ["Su","Mo","Tu","We","Th","Fr","Sa"], // Column headings for Dias starting at Sunday
 		weekHeader: "Wk", // Column header for week of the year
 		dateFormat: "mm/dd/yy", // See format options on parseDate
 		firstDay: 0, // The first day of the week, Sun = 0, Mon = 1, ...
@@ -4856,8 +4856,8 @@ $.extend(Datepicker.prototype, {
 	 * @param  value string - the date in the above format
 	 * @param  settings Object - attributes include:
 	 *					shortYearCutoff  number - the cutoff year for determining the century (optional)
-	 *					dayNamesShort	string[7] - abbreviated names of the days from Sunday (optional)
-	 *					dayNames		string[7] - names of the days from Sunday (optional)
+	 *					dayNamesShort	string[7] - abbreviated names of the Dias from Sunday (optional)
+	 *					dayNames		string[7] - names of the Dias from Sunday (optional)
 	 *					monthNamesShort string[12] - abbreviated names of the months (optional)
 	 *					monthNames		string[12] - names of the months (optional)
 	 * @return  Date - the extracted date value or null if value is blank
@@ -4900,8 +4900,8 @@ $.extend(Datepicker.prototype, {
 				var isDoubled = lookAhead(match),
 					size = (match === "@" ? 14 : (match === "!" ? 20 :
 					(match === "y" && isDoubled ? 4 : (match === "o" ? 3 : 2)))),
-					minSize = (match === "y" ? size : 1),
-					digits = new RegExp("^\\d{" + minSize + "," + size + "}"),
+					Minize = (match === "y" ? size : 1),
+					digits = new RegExp("^\\d{" + Minize + "," + size + "}"),
 					num = value.substring(iValue).match(digits);
 				if (!num) {
 					throw "Missing number at position " + iValue;
@@ -5010,7 +5010,7 @@ $.extend(Datepicker.prototype, {
 			month = 1;
 			day = doy;
 			do {
-				dim = this._getDaysInMonth(year, month - 1);
+				dim = this._getDiasInMonth(year, month - 1);
 				if (day <= dim) {
 					break;
 				}
@@ -5065,8 +5065,8 @@ $.extend(Datepicker.prototype, {
 	 * @param  format string - the desired format of the date
 	 * @param  date Date - the date value to format
 	 * @param  settings Object - attributes include:
-	 *					dayNamesShort	string[7] - abbreviated names of the days from Sunday (optional)
-	 *					dayNames		string[7] - names of the days from Sunday (optional)
+	 *					dayNamesShort	string[7] - abbreviated names of the Dias from Sunday (optional)
+	 *					dayNames		string[7] - names of the Dias from Sunday (optional)
 	 *					monthNamesShort string[12] - abbreviated names of the months (optional)
 	 *					monthNames		string[12] - names of the months (optional)
 	 * @return  string - the date in the above format
@@ -5271,11 +5271,11 @@ $.extend(Datepicker.prototype, {
 							day += parseInt(matches[1],10) * 7; break;
 						case "m" : case "M" :
 							month += parseInt(matches[1],10);
-							day = Math.min(day, $.datepicker._getDaysInMonth(year, month));
+							day = Math.min(day, $.datepicker._getDiasInMonth(year, month));
 							break;
 						case "y": case "Y" :
 							year += parseInt(matches[1],10);
-							day = Math.min(day, $.datepicker._getDaysInMonth(year, month));
+							day = Math.min(day, $.datepicker._getDiasInMonth(year, month));
 							break;
 					}
 					matches = pattern.exec(offset);
@@ -5287,7 +5287,7 @@ $.extend(Datepicker.prototype, {
 
 		newDate = (newDate && newDate.toString() === "Invalid Date" ? defaultDate : newDate);
 		if (newDate) {
-			newDate.setHours(0);
+			newDate.setHoras(0);
 			newDate.setMinutes(0);
 			newDate.setSeconds(0);
 			newDate.setMilliseconds(0);
@@ -5296,7 +5296,7 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Handle switch to/from daylight saving.
-	 * Hours may be non-zero on daylight saving cut-over:
+	 * Horas may be non-zero on daylight saving cut-over:
 	 * > 12 when midnight changeover, but then cannot generate
 	 * midnight datetime, so jump to 1AM, otherwise reset.
 	 * @param  date  (Date) the date to check
@@ -5306,7 +5306,7 @@ $.extend(Datepicker.prototype, {
 		if (!date) {
 			return null;
 		}
-		date.setHours(date.getHours() > 12 ? date.getHours() + 2 : 0);
+		date.setHoras(date.getHoras() > 12 ? date.getHoras() + 2 : 0);
 		return date;
 	},
 
@@ -5380,8 +5380,8 @@ $.extend(Datepicker.prototype, {
 			controls, buttonPanel, firstDay, showWeek, dayNames, dayNamesMin,
 			monthNames, monthNamesShort, beforeShowDay, showOtherMonths,
 			selectOtherMonths, defaultDate, html, dow, row, group, col, selectedDate,
-			cornerClass, calender, thead, day, daysInMonth, leadDays, curRows, numRows,
-			printDate, dRow, tbody, daySettings, otherMonth, unselectable,
+			cornerClass, calender, thead, day, DiasInMonth, leadDias, curRows, numRows,
+			printDate, dRow, tbody, Diasettings, otherMonth, unselectable,
 			tempDate = new Date(),
 			today = this._daylightSavingAdjust(
 				new Date(tempDate.getFullYear(), tempDate.getMonth(), tempDate.getDate())), // clear time
@@ -5493,43 +5493,43 @@ $.extend(Datepicker.prototype, {
 					"</div><table class='ui-datepicker-calendar'><thead>" +
 					"<tr>";
 				thead = (showWeek ? "<th class='ui-datepicker-week-col'>" + this._get(inst, "weekHeader") + "</th>" : "");
-				for (dow = 0; dow < 7; dow++) { // days of the week
+				for (dow = 0; dow < 7; dow++) { // Dias of the week
 					day = (dow + firstDay) % 7;
 					thead += "<th scope='col'" + ((dow + firstDay + 6) % 7 >= 5 ? " class='ui-datepicker-week-end'" : "") + ">" +
 						"<span title='" + dayNames[day] + "'>" + dayNamesMin[day] + "</span></th>";
 				}
 				calender += thead + "</tr></thead><tbody>";
-				daysInMonth = this._getDaysInMonth(drawYear, drawMonth);
+				DiasInMonth = this._getDiasInMonth(drawYear, drawMonth);
 				if (drawYear === inst.selectedYear && drawMonth === inst.selectedMonth) {
-					inst.selectedDay = Math.min(inst.selectedDay, daysInMonth);
+					inst.selectedDay = Math.min(inst.selectedDay, DiasInMonth);
 				}
-				leadDays = (this._getFirstDayOfMonth(drawYear, drawMonth) - firstDay + 7) % 7;
-				curRows = Math.ceil((leadDays + daysInMonth) / 7); // calculate the number of rows to generate
+				leadDias = (this._getFirstDayOfMonth(drawYear, drawMonth) - firstDay + 7) % 7;
+				curRows = Math.ceil((leadDias + DiasInMonth) / 7); // calculate the number of rows to generate
 				numRows = (isMultiMonth ? this.maxRows > curRows ? this.maxRows : curRows : curRows); //If multiple months, use the higher number of rows (see #7043)
 				this.maxRows = numRows;
-				printDate = this._daylightSavingAdjust(new Date(drawYear, drawMonth, 1 - leadDays));
+				printDate = this._daylightSavingAdjust(new Date(drawYear, drawMonth, 1 - leadDias));
 				for (dRow = 0; dRow < numRows; dRow++) { // create date picker rows
 					calender += "<tr>";
 					tbody = (!showWeek ? "" : "<td class='ui-datepicker-week-col'>" +
 						this._get(inst, "calculateWeek")(printDate) + "</td>");
-					for (dow = 0; dow < 7; dow++) { // create date picker days
-						daySettings = (beforeShowDay ?
+					for (dow = 0; dow < 7; dow++) { // create date picker Dias
+						Diasettings = (beforeShowDay ?
 							beforeShowDay.apply((inst.input ? inst.input[0] : null), [printDate]) : [true, ""]);
 						otherMonth = (printDate.getMonth() !== drawMonth);
-						unselectable = (otherMonth && !selectOtherMonths) || !daySettings[0] ||
+						unselectable = (otherMonth && !selectOtherMonths) || !Diasettings[0] ||
 							(minDate && printDate < minDate) || (maxDate && printDate > maxDate);
 						tbody += "<td class='" +
 							((dow + firstDay + 6) % 7 >= 5 ? " ui-datepicker-week-end" : "") + // highlight weekends
-							(otherMonth ? " ui-datepicker-other-month" : "") + // highlight days from other months
+							(otherMonth ? " ui-datepicker-other-month" : "") + // highlight Dias from other months
 							((printDate.getTime() === selectedDate.getTime() && drawMonth === inst.selectedMonth && inst._keyEvent) || // user pressed key
 							(defaultDate.getTime() === printDate.getTime() && defaultDate.getTime() === selectedDate.getTime()) ?
 							// or defaultDate is current printedDate and defaultDate is selectedDate
 							" " + this._dayOverClass : "") + // highlight selected day
-							(unselectable ? " " + this._unselectableClass + " ui-state-disabled": "") +  // highlight unselectable days
-							(otherMonth && !showOtherMonths ? "" : " " + daySettings[1] + // highlight custom dates
+							(unselectable ? " " + this._unselectableClass + " ui-state-disabled": "") +  // highlight unselectable Dias
+							(otherMonth && !showOtherMonths ? "" : " " + Diasettings[1] + // highlight custom dates
 							(printDate.getTime() === currentDate.getTime() ? " " + this._currentClass : "") + // highlight selected day
 							(printDate.getTime() === today.getTime() ? " ui-datepicker-today" : "")) + "'" + // highlight today (if different)
-							((!otherMonth || showOtherMonths) && daySettings[2] ? " title='" + daySettings[2].replace(/'/g, "&#39;") + "'" : "") + // cell title
+							((!otherMonth || showOtherMonths) && Diasettings[2] ? " title='" + Diasettings[2].replace(/'/g, "&#39;") + "'" : "") + // cell title
 							(unselectable ? "" : " data-handler='selectDay' data-event='click' data-month='" + printDate.getMonth() + "' data-year='" + printDate.getFullYear() + "'") + ">" + // actions
 							(otherMonth && !showOtherMonths ? "&#xa0;" : // display for other months
 							(unselectable ? "<span class='ui-state-default'>" + printDate.getDate() + "</span>" : "<a class='ui-state-default" +
@@ -5634,7 +5634,7 @@ $.extend(Datepicker.prototype, {
 	_adjustInstDate: function(inst, offset, period) {
 		var year = inst.drawYear + (period === "Y" ? offset : 0),
 			month = inst.drawMonth + (period === "M" ? offset : 0),
-			day = Math.min(inst.selectedDay, this._getDaysInMonth(year, month)) + (period === "D" ? offset : 0),
+			day = Math.min(inst.selectedDay, this._getDiasInMonth(year, month)) + (period === "D" ? offset : 0),
 			date = this._restrictMinMax(inst, this._daylightSavingAdjust(new Date(year, month, day)));
 
 		inst.selectedDay = date.getDate();
@@ -5673,8 +5673,8 @@ $.extend(Datepicker.prototype, {
 		return this._determineDate(inst, this._get(inst, minMax + "Date"), null);
 	},
 
-	/* Find the number of days in a given month. */
-	_getDaysInMonth: function(year, month) {
+	/* Find the number of Dias in a given month. */
+	_getDiasInMonth: function(year, month) {
 		return 32 - this._daylightSavingAdjust(new Date(year, month, 32)).getDate();
 	},
 
@@ -5690,7 +5690,7 @@ $.extend(Datepicker.prototype, {
 			curMonth + (offset < 0 ? offset : numMonths[0] * numMonths[1]), 1));
 
 		if (offset < 0) {
-			date.setDate(this._getDaysInMonth(date.getFullYear(), date.getMonth()));
+			date.setDate(this._getDiasInMonth(date.getFullYear(), date.getMonth()));
 		}
 		return this._isInRange(inst, date);
 	},
@@ -9653,8 +9653,8 @@ color.fn = jQuery.extend( color.prototype, {
 			return this;
 		}
 	},
-	is: function( compare ) {
-		var is = color( compare ),
+	is: function( Comparar ) {
+		var is = color( Comparar ),
 			same = true,
 			inst = this;
 

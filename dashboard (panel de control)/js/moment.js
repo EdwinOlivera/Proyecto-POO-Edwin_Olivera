@@ -584,7 +584,7 @@
     var SECOND = 5;
     var MILLISECOND = 6;
 
-    function daysInMonth(year, month) {
+    function DiasInMonth(year, month) {
         return new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
     }
 
@@ -684,7 +684,7 @@
             }
         }
 
-        dayOfMonth = Math.min(mom.date(), daysInMonth(mom.year(), value));
+        dayOfMonth = Math.min(mom.date(), DiasInMonth(mom.year(), value));
         mom._d['set' + (mom._isUTC ? 'UTC' : '') + 'Month'](value, dayOfMonth);
         return mom;
     }
@@ -699,8 +699,8 @@
         }
     }
 
-    function getDaysInMonth () {
-        return daysInMonth(this.year(), this.month());
+    function getDiasInMonth () {
+        return DiasInMonth(this.year(), this.month());
     }
 
     function checkOverflow (m) {
@@ -710,7 +710,7 @@
         if (a && getParsingFlags(m).overflow === -2) {
             overflow =
                 a[MONTH]       < 0 || a[MONTH]       > 11  ? MONTH :
-                a[DATE]        < 1 || a[DATE]        > daysInMonth(a[YEAR], a[MONTH]) ? DATE :
+                a[DATE]        < 1 || a[DATE]        > DiasInMonth(a[YEAR], a[MONTH]) ? DATE :
                 a[HOUR]        < 0 || a[HOUR]        > 24 || (a[HOUR] === 24 && (a[MINUTE] !== 0 || a[SECOND] !== 0 || a[MILLISECOND] !== 0)) ? HOUR :
                 a[MINUTE]      < 0 || a[MINUTE]      > 59  ? MINUTE :
                 a[SECOND]      < 0 || a[SECOND]      > 59  ? SECOND :
@@ -880,7 +880,7 @@
 
     // HELPERS
 
-    function daysInYear(year) {
+    function DiasInYear(year) {
         return isLeapYear(year) ? 366 : 365;
     }
 
@@ -932,19 +932,19 @@
     //                      (eg. ISO weeks use thursday (4))
     function weekOfYear(mom, firstDayOfWeek, firstDayOfWeekOfYear) {
         var end = firstDayOfWeekOfYear - firstDayOfWeek,
-            daysToDayOfWeek = firstDayOfWeekOfYear - mom.day(),
+            DiasToDayOfWeek = firstDayOfWeekOfYear - mom.day(),
             adjustedMoment;
 
 
-        if (daysToDayOfWeek > end) {
-            daysToDayOfWeek -= 7;
+        if (DiasToDayOfWeek > end) {
+            DiasToDayOfWeek -= 7;
         }
 
-        if (daysToDayOfWeek < end - 7) {
-            daysToDayOfWeek += 7;
+        if (DiasToDayOfWeek < end - 7) {
+            DiasToDayOfWeek += 7;
         }
 
-        adjustedMoment = local__createLocal(mom).add(daysToDayOfWeek, 'd');
+        adjustedMoment = local__createLocal(mom).add(DiasToDayOfWeek, 'd');
         return {
             week: Math.ceil(adjustedMoment.dayOfYear() / 7),
             year: adjustedMoment.year()
@@ -1001,17 +1001,17 @@
     //http://en.wikipedia.org/wiki/ISO_week_date#Calculating_a_date_given_the_year.2C_week_number_and_weekday
     function dayOfYearFromWeeks(year, week, weekday, firstDayOfWeekOfYear, firstDayOfWeek) {
         var d = createUTCDate(year, 0, 1).getUTCDay();
-        var daysToAdd;
+        var DiasToAdd;
         var dayOfYear;
 
         d = d === 0 ? 7 : d;
         weekday = weekday != null ? weekday : firstDayOfWeek;
-        daysToAdd = firstDayOfWeek - d + (d > firstDayOfWeekOfYear ? 7 : 0) - (d < firstDayOfWeek ? 7 : 0);
-        dayOfYear = 7 * (week - 1) + (weekday - firstDayOfWeek) + daysToAdd + 1;
+        DiasToAdd = firstDayOfWeek - d + (d > firstDayOfWeekOfYear ? 7 : 0) - (d < firstDayOfWeek ? 7 : 0);
+        dayOfYear = 7 * (week - 1) + (weekday - firstDayOfWeek) + DiasToAdd + 1;
 
         return {
             year      : dayOfYear > 0 ? year      : year - 1,
-            dayOfYear : dayOfYear > 0 ? dayOfYear : daysInYear(year - 1) + dayOfYear
+            dayOfYear : dayOfYear > 0 ? dayOfYear : DiasInYear(year - 1) + dayOfYear
         };
     }
 
@@ -1054,7 +1054,7 @@
 
         currentDate = currentDateArray(config);
 
-        //compute day of the year from weeks and weekdays
+        //compute day of the year from weeks and weekDias
         if (config._w && config._a[DATE] == null && config._a[MONTH] == null) {
             dayOfYearFromWeekInfo(config);
         }
@@ -1063,7 +1063,7 @@
         if (config._dayOfYear) {
             yearToUse = defaults(config._a[YEAR], currentDate[YEAR]);
 
-            if (config._dayOfYear > daysInYear(yearToUse)) {
+            if (config._dayOfYear > DiasInYear(yearToUse)) {
                 getParsingFlags(config)._overflowDayOfYear = true;
             }
 
@@ -1436,8 +1436,8 @@
             quarters = normalizedInput.quarter || 0,
             months = normalizedInput.month || 0,
             weeks = normalizedInput.week || 0,
-            days = normalizedInput.day || 0,
-            hours = normalizedInput.hour || 0,
+            Dias = normalizedInput.day || 0,
+            Horas = normalizedInput.hour || 0,
             minutes = normalizedInput.minute || 0,
             seconds = normalizedInput.second || 0,
             milliseconds = normalizedInput.millisecond || 0;
@@ -1446,12 +1446,12 @@
         this._milliseconds = +milliseconds +
             seconds * 1e3 + // 1000
             minutes * 6e4 + // 1000 * 60
-            hours * 36e5; // 1000 * 60 * 60
-        // Because of dateAddRemove treats 24 hours as different from a
+            Horas * 36e5; // 1000 * 60 * 60
+        // Because of dateAddRemove treats 24 Horas as different from a
         // day when working around DST, we need to store them separately
-        this._days = +days +
+        this._Dias = +Dias +
             weeks * 7;
-        // It is impossible translate months into days without knowing
+        // It is impossible translate months into Dias without knowing
         // which months you are are talking about, so we have to store
         // it separately.
         this._months = +months +
@@ -1677,7 +1677,7 @@
         if (isDuration(input)) {
             duration = {
                 ms : input._milliseconds,
-                d  : input._days,
+                d  : input._Dias,
                 M  : input._months
             };
         } else if (typeof input === 'number') {
@@ -1784,21 +1784,21 @@
 
     function add_subtract__addSubtract (mom, duration, isAdding, updateOffset) {
         var milliseconds = duration._milliseconds,
-            days = duration._days,
+            Dias = duration._Dias,
             months = duration._months;
         updateOffset = updateOffset == null ? true : updateOffset;
 
         if (milliseconds) {
             mom._d.setTime(+mom._d + milliseconds * isAdding);
         }
-        if (days) {
-            get_set__set(mom, 'Date', get_set__get(mom, 'Date') + days * isAdding);
+        if (Dias) {
+            get_set__set(mom, 'Date', get_set__get(mom, 'Date') + Dias * isAdding);
         }
         if (months) {
             setMonth(mom, get_set__get(mom, 'Month') + months * isAdding);
         }
         if (updateOffset) {
-            utils_hooks__hooks.updateOffset(mom, days || months);
+            utils_hooks__hooks.updateOffset(mom, Dias || months);
         }
     }
 
@@ -1806,11 +1806,11 @@
     var add_subtract__subtract = createAdder(-1, 'subtract');
 
     function moment_calendar__calendar (time) {
-        // We want to compare the start of today, vs this.
+        // We want to Comparar the start of today, vs this.
         // Getting start-of-today depends on whether we're local/utc/offset or not.
         var now = time || local__createLocal(),
             sod = cloneWithOffset(now, this).startOf('day'),
-            diff = this.diff(sod, 'days', true),
+            diff = this.diff(sod, 'Dias', true),
             format = diff < -6 ? 'sameElse' :
                 diff < -1 ? 'lastWeek' :
                 diff < 0 ? 'lastDay' :
@@ -2009,7 +2009,7 @@
         case 'week':
         case 'isoWeek':
         case 'day':
-            this.hours(0);
+            this.Horas(0);
             /* falls through */
         case 'hour':
             this.minutes(0);
@@ -2187,15 +2187,15 @@
     addFormatToken('d', 0, 'do', 'day');
 
     addFormatToken('dd', 0, 0, function (format) {
-        return this.localeData().weekdaysMin(this, format);
+        return this.localeData().weekDiasMin(this, format);
     });
 
     addFormatToken('ddd', 0, 0, function (format) {
-        return this.localeData().weekdaysShort(this, format);
+        return this.localeData().weekDiasShort(this, format);
     });
 
     addFormatToken('dddd', 0, 0, function (format) {
-        return this.localeData().weekdays(this, format);
+        return this.localeData().weekDias(this, format);
     });
 
     addFormatToken('e', 0, 0, 'weekday');
@@ -2217,7 +2217,7 @@
     addRegexToken('dddd', matchWord);
 
     addWeekParseToken(['dd', 'ddd', 'dddd'], function (input, week, config) {
-        var weekday = config._locale.weekdaysParse(input);
+        var weekday = config._locale.weekDiasParse(input);
         // if we didn't get a weekday name, mark the date as invalid
         if (weekday != null) {
             week.d = weekday;
@@ -2238,7 +2238,7 @@
                 input = parseInt(input, 10);
             }
             else {
-                input = locale.weekdaysParse(input);
+                input = locale.weekDiasParse(input);
                 if (typeof input !== 'number') {
                     return null;
                 }
@@ -2249,37 +2249,37 @@
 
     // LOCALES
 
-    var defaultLocaleWeekdays = 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_');
-    function localeWeekdays (m) {
-        return this._weekdays[m.day()];
+    var defaultLocaleWeekDias = 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_');
+    function localeWeekDias (m) {
+        return this._weekDias[m.day()];
     }
 
-    var defaultLocaleWeekdaysShort = 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_');
-    function localeWeekdaysShort (m) {
-        return this._weekdaysShort[m.day()];
+    var defaultLocaleWeekDiasShort = 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_');
+    function localeWeekDiasShort (m) {
+        return this._weekDiasShort[m.day()];
     }
 
-    var defaultLocaleWeekdaysMin = 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_');
-    function localeWeekdaysMin (m) {
-        return this._weekdaysMin[m.day()];
+    var defaultLocaleWeekDiasMin = 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_');
+    function localeWeekDiasMin (m) {
+        return this._weekDiasMin[m.day()];
     }
 
-    function localeWeekdaysParse (weekdayName) {
+    function localeWeekDiasParse (weekdayName) {
         var i, mom, regex;
 
-        if (!this._weekdaysParse) {
-            this._weekdaysParse = [];
+        if (!this._weekDiasParse) {
+            this._weekDiasParse = [];
         }
 
         for (i = 0; i < 7; i++) {
             // make the regex if we don't have it already
-            if (!this._weekdaysParse[i]) {
+            if (!this._weekDiasParse[i]) {
                 mom = local__createLocal([2000, 1]).day(i);
-                regex = '^' + this.weekdays(mom, '') + '|^' + this.weekdaysShort(mom, '') + '|^' + this.weekdaysMin(mom, '');
-                this._weekdaysParse[i] = new RegExp(regex.replace('.', ''), 'i');
+                regex = '^' + this.weekDias(mom, '') + '|^' + this.weekDiasShort(mom, '') + '|^' + this.weekDiasMin(mom, '');
+                this._weekDiasParse[i] = new RegExp(regex.replace('.', ''), 'i');
             }
             // test the regex
-            if (this._weekdaysParse[i].test(weekdayName)) {
+            if (this._weekDiasParse[i].test(weekdayName)) {
                 return i;
             }
         }
@@ -2311,12 +2311,12 @@
 
     addFormatToken('H', ['HH', 2], 0, 'hour');
     addFormatToken('h', ['hh', 2], 0, function () {
-        return this.hours() % 12 || 12;
+        return this.Horas() % 12 || 12;
     });
 
     function meridiem (token, lowercase) {
         addFormatToken(token, 0, 0, function () {
-            return this.localeData().meridiem(this.hours(), this.minutes(), lowercase);
+            return this.localeData().meridiem(this.Horas(), this.minutes(), lowercase);
         });
     }
 
@@ -2359,8 +2359,8 @@
     }
 
     var defaultLocaleMeridiemParse = /[ap]\.?m?\.?/i;
-    function localeMeridiem (hours, minutes, isLower) {
-        if (hours > 11) {
+    function localeMeridiem (Horas, minutes, isLower) {
+        if (Horas > 11) {
             return isLower ? 'pm' : 'PM';
         } else {
             return isLower ? 'am' : 'AM';
@@ -2372,9 +2372,9 @@
 
     // Setting the hour should keep the time, because the user explicitly
     // specified which hour he wants. So trying to maintain the same hour (in
-    // a new timezone) makes sense. Adding/subtracting hours does not follow
+    // a new timezone) makes sense. Adding/subtracting Horas does not follow
     // this rule.
-    var getSetHour = makeGetSet('Hours', true);
+    var getSetHour = makeGetSet('Horas', true);
 
     addFormatToken('m', ['mm', 2], 0, 'minute');
 
@@ -2503,7 +2503,7 @@
 
     // Month
     momentPrototype__proto.month       = getSetMonth;
-    momentPrototype__proto.daysInMonth = getDaysInMonth;
+    momentPrototype__proto.DiasInMonth = getDiasInMonth;
 
     // Week
     momentPrototype__proto.week           = momentPrototype__proto.weeks        = getSetWeek;
@@ -2513,13 +2513,13 @@
 
     // Day
     momentPrototype__proto.date       = getSetDayOfMonth;
-    momentPrototype__proto.day        = momentPrototype__proto.days             = getSetDayOfWeek;
+    momentPrototype__proto.day        = momentPrototype__proto.Dias             = getSetDayOfWeek;
     momentPrototype__proto.weekday    = getSetLocaleDayOfWeek;
     momentPrototype__proto.isoWeekday = getSetISODayOfWeek;
     momentPrototype__proto.dayOfYear  = getSetDayOfYear;
 
     // Hour
-    momentPrototype__proto.hour = momentPrototype__proto.hours = getSetHour;
+    momentPrototype__proto.hour = momentPrototype__proto.Horas = getSetHour;
 
     // Minute
     momentPrototype__proto.minute = momentPrototype__proto.minutes = getSetMinute;
@@ -2621,9 +2621,9 @@
         m  : 'a minute',
         mm : '%d minutes',
         h  : 'an hour',
-        hh : '%d hours',
+        hh : '%d Horas',
         d  : 'a day',
-        dd : '%d days',
+        dd : '%d Dias',
         M  : 'a month',
         MM : '%d months',
         y  : 'a year',
@@ -2689,15 +2689,15 @@
     prototype__proto.firstDayOfWeek = localeFirstDayOfWeek;
 
     // Day of Week
-    prototype__proto.weekdays       =        localeWeekdays;
-    prototype__proto._weekdays      = defaultLocaleWeekdays;
-    prototype__proto.weekdaysMin    =        localeWeekdaysMin;
-    prototype__proto._weekdaysMin   = defaultLocaleWeekdaysMin;
-    prototype__proto.weekdaysShort  =        localeWeekdaysShort;
-    prototype__proto._weekdaysShort = defaultLocaleWeekdaysShort;
-    prototype__proto.weekdaysParse  =        localeWeekdaysParse;
+    prototype__proto.weekDias       =        localeWeekDias;
+    prototype__proto._weekDias      = defaultLocaleWeekDias;
+    prototype__proto.weekDiasMin    =        localeWeekDiasMin;
+    prototype__proto._weekDiasMin   = defaultLocaleWeekDiasMin;
+    prototype__proto.weekDiasShort  =        localeWeekDiasShort;
+    prototype__proto._weekDiasShort = defaultLocaleWeekDiasShort;
+    prototype__proto.weekDiasParse  =        localeWeekDiasParse;
 
-    // Hours
+    // Horas
     prototype__proto.isPM = localeIsPM;
     prototype__proto._meridiemParse = defaultLocaleMeridiemParse;
     prototype__proto.meridiem = localeMeridiem;
@@ -2736,16 +2736,16 @@
         return list(format, index, 'monthsShort', 12, 'month');
     }
 
-    function lists__listWeekdays (format, index) {
-        return list(format, index, 'weekdays', 7, 'day');
+    function lists__listWeekDias (format, index) {
+        return list(format, index, 'weekDias', 7, 'day');
     }
 
-    function lists__listWeekdaysShort (format, index) {
-        return list(format, index, 'weekdaysShort', 7, 'day');
+    function lists__listWeekDiasShort (format, index) {
+        return list(format, index, 'weekDiasShort', 7, 'day');
     }
 
-    function lists__listWeekdaysMin (format, index) {
-        return list(format, index, 'weekdaysMin', 7, 'day');
+    function lists__listWeekDiasMin (format, index) {
+        return list(format, index, 'weekDiasMin', 7, 'day');
     }
 
     locale_locales__getSetGlobalLocale('en', {
@@ -2770,13 +2770,13 @@
         var data           = this._data;
 
         this._milliseconds = mathAbs(this._milliseconds);
-        this._days         = mathAbs(this._days);
+        this._Dias         = mathAbs(this._Dias);
         this._months       = mathAbs(this._months);
 
         data.milliseconds  = mathAbs(data.milliseconds);
         data.seconds       = mathAbs(data.seconds);
         data.minutes       = mathAbs(data.minutes);
-        data.hours         = mathAbs(data.hours);
+        data.Horas         = mathAbs(data.Horas);
         data.months        = mathAbs(data.months);
         data.years         = mathAbs(data.years);
 
@@ -2787,7 +2787,7 @@
         var other = create__createDuration(input, value);
 
         duration._milliseconds += direction * other._milliseconds;
-        duration._days         += direction * other._days;
+        duration._Dias         += direction * other._Dias;
         duration._months       += direction * other._months;
 
         return duration._bubble();
@@ -2805,10 +2805,10 @@
 
     function bubble () {
         var milliseconds = this._milliseconds;
-        var days         = this._days;
+        var Dias         = this._Dias;
         var months       = this._months;
         var data         = this._data;
-        var seconds, minutes, hours, years = 0;
+        var seconds, minutes, Horas, years = 0;
 
         // The following code bubbles up values, see the tests for
         // examples of what that means.
@@ -2820,64 +2820,64 @@
         minutes           = absFloor(seconds / 60);
         data.minutes      = minutes % 60;
 
-        hours             = absFloor(minutes / 60);
-        data.hours        = hours % 24;
+        Horas             = absFloor(minutes / 60);
+        data.Horas        = Horas % 24;
 
-        days += absFloor(hours / 24);
+        Dias += absFloor(Horas / 24);
 
-        // Accurately convert days to years, assume start from year 0.
-        years = absFloor(daysToYears(days));
-        days -= absFloor(yearsToDays(years));
+        // Accurately convert Dias to years, assume start from year 0.
+        years = absFloor(DiasToYears(Dias));
+        Dias -= absFloor(yearsToDias(years));
 
-        // 30 days to a month
+        // 30 Dias to a month
         // TODO (iskren): Use anchor date (like 1st Jan) to compute this.
-        months += absFloor(days / 30);
-        days   %= 30;
+        months += absFloor(Dias / 30);
+        Dias   %= 30;
 
         // 12 months -> 1 year
         years  += absFloor(months / 12);
         months %= 12;
 
-        data.days   = days;
+        data.Dias   = Dias;
         data.months = months;
         data.years  = years;
 
         return this;
     }
 
-    function daysToYears (days) {
-        // 400 years have 146097 days (taking into account leap year rules)
-        return days * 400 / 146097;
+    function DiasToYears (Dias) {
+        // 400 years have 146097 Dias (taking into account leap year rules)
+        return Dias * 400 / 146097;
     }
 
-    function yearsToDays (years) {
+    function yearsToDias (years) {
         // years * 365 + absFloor(years / 4) -
         //     absFloor(years / 100) + absFloor(years / 400);
         return years * 146097 / 400;
     }
 
     function as (units) {
-        var days;
+        var Dias;
         var months;
         var milliseconds = this._milliseconds;
 
         units = normalizeUnits(units);
 
         if (units === 'month' || units === 'year') {
-            days   = this._days   + milliseconds / 864e5;
-            months = this._months + daysToYears(days) * 12;
+            Dias   = this._Dias   + milliseconds / 864e5;
+            months = this._months + DiasToYears(Dias) * 12;
             return units === 'month' ? months : months / 12;
         } else {
             // handle milliseconds separately because of floating point math errors (issue #1867)
-            days = this._days + Math.round(yearsToDays(this._months / 12));
+            Dias = this._Dias + Math.round(yearsToDias(this._months / 12));
             switch (units) {
-                case 'week'   : return days / 7     + milliseconds / 6048e5;
-                case 'day'    : return days         + milliseconds / 864e5;
-                case 'hour'   : return days * 24    + milliseconds / 36e5;
-                case 'minute' : return days * 1440  + milliseconds / 6e4;
-                case 'second' : return days * 86400 + milliseconds / 1000;
+                case 'week'   : return Dias / 7     + milliseconds / 6048e5;
+                case 'day'    : return Dias         + milliseconds / 864e5;
+                case 'hour'   : return Dias * 24    + milliseconds / 36e5;
+                case 'minute' : return Dias * 1440  + milliseconds / 6e4;
+                case 'second' : return Dias * 86400 + milliseconds / 1000;
                 // Math.floor prevents floating point math errors here
-                case 'millisecond': return Math.floor(days * 864e5) + milliseconds;
+                case 'millisecond': return Math.floor(Dias * 864e5) + milliseconds;
                 default: throw new Error('Unknown unit ' + units);
             }
         }
@@ -2887,7 +2887,7 @@
     function duration_as__valueOf () {
         return (
             this._milliseconds +
-            this._days * 864e5 +
+            this._Dias * 864e5 +
             (this._months % 12) * 2592e6 +
             toInt(this._months / 12) * 31536e6
         );
@@ -2902,8 +2902,8 @@
     var asMilliseconds = makeAs('ms');
     var asSeconds      = makeAs('s');
     var asMinutes      = makeAs('m');
-    var asHours        = makeAs('h');
-    var asDays         = makeAs('d');
+    var asHoras        = makeAs('h');
+    var asDias         = makeAs('d');
     var asWeeks        = makeAs('w');
     var asMonths       = makeAs('M');
     var asYears        = makeAs('y');
@@ -2922,21 +2922,21 @@
     var duration_get__milliseconds = makeGetter('milliseconds');
     var seconds      = makeGetter('seconds');
     var minutes      = makeGetter('minutes');
-    var hours        = makeGetter('hours');
-    var days         = makeGetter('days');
+    var Horas        = makeGetter('Horas');
+    var Dias         = makeGetter('Dias');
     var months       = makeGetter('months');
     var years        = makeGetter('years');
 
     function weeks () {
-        return absFloor(this.days() / 7);
+        return absFloor(this.Dias() / 7);
     }
 
     var round = Math.round;
     var thresholds = {
         s: 45,  // seconds to minute
         m: 45,  // minutes to hour
-        h: 22,  // hours to day
-        d: 26,  // days to month
+        h: 22,  // Horas to day
+        d: 26,  // Dias to month
         M: 11   // months to year
     };
 
@@ -2949,18 +2949,18 @@
         var duration = create__createDuration(posNegDuration).abs();
         var seconds  = round(duration.as('s'));
         var minutes  = round(duration.as('m'));
-        var hours    = round(duration.as('h'));
-        var days     = round(duration.as('d'));
+        var Horas    = round(duration.as('h'));
+        var Dias     = round(duration.as('d'));
         var months   = round(duration.as('M'));
         var years    = round(duration.as('y'));
 
         var a = seconds < thresholds.s && ['s', seconds]  ||
                 minutes === 1          && ['m']           ||
                 minutes < thresholds.m && ['mm', minutes] ||
-                hours   === 1          && ['h']           ||
-                hours   < thresholds.h && ['hh', hours]   ||
-                days    === 1          && ['d']           ||
-                days    < thresholds.d && ['dd', days]    ||
+                Horas   === 1          && ['h']           ||
+                Horas   < thresholds.h && ['hh', Horas]   ||
+                Dias    === 1          && ['d']           ||
+                Dias    < thresholds.d && ['dd', Dias]    ||
                 months  === 1          && ['M']           ||
                 months  < thresholds.M && ['MM', months]  ||
                 years   === 1          && ['y']           || ['yy', years];
@@ -3000,8 +3000,8 @@
         // inspired by https://github.com/dordille/moment-isoduration/blob/master/moment.isoduration.js
         var Y = iso_string__abs(this.years());
         var M = iso_string__abs(this.months());
-        var D = iso_string__abs(this.days());
-        var h = iso_string__abs(this.hours());
+        var D = iso_string__abs(this.Dias());
+        var h = iso_string__abs(this.Horas());
         var m = iso_string__abs(this.minutes());
         var s = iso_string__abs(this.seconds() + this.milliseconds() / 1000);
         var total = this.asSeconds();
@@ -3032,8 +3032,8 @@
     duration_prototype__proto.asMilliseconds = asMilliseconds;
     duration_prototype__proto.asSeconds      = asSeconds;
     duration_prototype__proto.asMinutes      = asMinutes;
-    duration_prototype__proto.asHours        = asHours;
-    duration_prototype__proto.asDays         = asDays;
+    duration_prototype__proto.asHoras        = asHoras;
+    duration_prototype__proto.asDias         = asDias;
     duration_prototype__proto.asWeeks        = asWeeks;
     duration_prototype__proto.asMonths       = asMonths;
     duration_prototype__proto.asYears        = asYears;
@@ -3043,8 +3043,8 @@
     duration_prototype__proto.milliseconds   = duration_get__milliseconds;
     duration_prototype__proto.seconds        = seconds;
     duration_prototype__proto.minutes        = minutes;
-    duration_prototype__proto.hours          = hours;
-    duration_prototype__proto.days           = days;
+    duration_prototype__proto.Horas          = Horas;
+    duration_prototype__proto.Dias           = Dias;
     duration_prototype__proto.weeks          = weeks;
     duration_prototype__proto.months         = months;
     duration_prototype__proto.years          = years;
@@ -3093,14 +3093,14 @@
     utils_hooks__hooks.invalid               = valid__createInvalid;
     utils_hooks__hooks.duration              = create__createDuration;
     utils_hooks__hooks.isMoment              = isMoment;
-    utils_hooks__hooks.weekdays              = lists__listWeekdays;
+    utils_hooks__hooks.weekDias              = lists__listWeekDias;
     utils_hooks__hooks.parseZone             = moment__createInZone;
     utils_hooks__hooks.localeData            = locale_locales__getLocale;
     utils_hooks__hooks.isDuration            = isDuration;
     utils_hooks__hooks.monthsShort           = lists__listMonthsShort;
-    utils_hooks__hooks.weekdaysMin           = lists__listWeekdaysMin;
+    utils_hooks__hooks.weekDiasMin           = lists__listWeekDiasMin;
     utils_hooks__hooks.defineLocale          = defineLocale;
-    utils_hooks__hooks.weekdaysShort         = lists__listWeekdaysShort;
+    utils_hooks__hooks.weekDiasShort         = lists__listWeekDiasShort;
     utils_hooks__hooks.normalizeUnits        = normalizeUnits;
     utils_hooks__hooks.relativeTimeThreshold = duration_humanize__getSetRelativeTimeThreshold;
 

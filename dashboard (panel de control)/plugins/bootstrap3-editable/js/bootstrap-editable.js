@@ -2204,9 +2204,9 @@ Makes editable any HTML element on the page. Applied as jQuery method.
         Note, that if element's text is empty - text is automatically generated from value and can be customized (see `autotext` option).  
         For example, to display currency sign:
         @example
-        <a id="price" data-type="text" data-value="100"></a>
+        <a id="Precio" data-type="text" data-value="100"></a>
         <script>
-        $('#price').editable({
+        $('#Precio').editable({
             ...
             display: function(value) {
               $(this).text(value + '$');
@@ -2386,7 +2386,7 @@ To create your own input you can inherit from this class.
        },
 
        /**
-        Converts value to string (for internal compare). For submitting to server used value2submit().
+        Converts value to string (for internal Comparar). For submitting to server used value2submit().
 
         @method value2str(value) 
         @param {mixed} value
@@ -3984,7 +3984,7 @@ $(function(){
                 day:    ['D',    'date'], 
                 month:  ['M',    'month'], 
                 year:   ['Y',    'year'], 
-                hour:   ['[Hh]', 'hours'],
+                hour:   ['[Hh]', 'Horas'],
                 minute: ['m',    'minutes'], 
                 second: ['s',    'seconds'],
                 ampm:   ['[Aa]', ''] 
@@ -3997,8 +3997,8 @@ $(function(){
             //update original input on change 
             this.$widget.on('change', 'select', $.proxy(function(e) {
                 this.$element.val(this.getValue()).change();
-                // update days count if month or year changes
-                if (this.options.smartDays) {
+                // update Dias count if month or year changes
+                if (this.options.smartDias) {
                     if ($(e.target).is('.month') || $(e.target).is('.year')) {
                         this.fillCombo('day');
                     }
@@ -4065,7 +4065,7 @@ $(function(){
                 return;
             }
 
-            // define method name to fill items, e.g `fillDays`
+            // define method name to fill items, e.g `fillDias`
             var f = 'fill' + k.charAt(0).toUpperCase() + k.slice(1); 
             var items = this[f]();
             var value = $combo.val();
@@ -4105,20 +4105,20 @@ $(function(){
         fillDay: function() {
             var items = this.fillCommon('d'), name, i,
                 twoDigit = this.options.template.indexOf('DD') !== -1,
-                daysCount = 31;
+                DiasCount = 31;
 
-            // detect days count (depends on month and year)
+            // detect Dias count (depends on month and year)
             // originally https://github.com/vitalets/combodate/pull/7
-            if (this.options.smartDays && this.$month && this.$year) {
+            if (this.options.smartDias && this.$month && this.$year) {
                 var month = parseInt(this.$month.val(), 10);
                 var year = parseInt(this.$year.val(), 10);
 
                 if (!isNaN(month) && !isNaN(year)) {
-                    daysCount = moment([year, month]).daysInMonth();
+                    DiasCount = moment([year, month]).DiasInMonth();
                 }
             }
 
-            for (i = 1; i <= daysCount; i++) {
+            for (i = 1; i <= DiasCount; i++) {
                 name = twoDigit ? this.leadZero(i) : i;
                 items.push([i, name]);
             }
@@ -4256,7 +4256,7 @@ $(function(){
                return '';
             }
             
-            //convert hours 12h --> 24h 
+            //convert Horas 12h --> 24h 
             if(this.$ampm) {
                 //12:00 pm --> 12:00 (24-h format, midday), 12:00 am --> 00:00 (24-h format, midnight, start of day)
                 if(values.hour === 12) {
@@ -4344,8 +4344,8 @@ $(function(){
                     }
                 });
 
-                // update days count
-                if (this.options.smartDays) {
+                // update Dias count
+                if (this.options.smartDias) {
                     this.fillCombo('day');
                 }
                
@@ -4425,7 +4425,7 @@ $(function(){
         firstItem: 'empty', //'name', 'empty', 'none'
         errorClass: null,
         roundTime: true, // whether to round minutes and seconds if step > 1
-        smartDays: false // whether days in combo depend on selected month: 31, 30, 28
+        smartDias: false // whether Dias in combo depend on selected month: 31, 30, 28
     };
 
 }(window.jQuery));
@@ -4992,7 +4992,7 @@ Editableform based on Twitter Bootstrap 3
 
 		this.setStartDate(this.o.startDate);
 		this.setEndDate(this.o.endDate);
-		this.setDaysOfWeekDisabled(this.o.daysOfWeekDisabled);
+		this.setDiasOfWeekDisabled(this.o.DiasOfWeekDisabled);
 
 		this.fillDow();
 		this.fillMonths();
@@ -5065,10 +5065,10 @@ Editableform based on Twitter Bootstrap 3
 				o.endDate = DPGlobal.parseDate(o.endDate, format, o.language);
 			}
 
-			o.daysOfWeekDisabled = o.daysOfWeekDisabled||[];
-			if (!$.isArray(o.daysOfWeekDisabled))
-				o.daysOfWeekDisabled = o.daysOfWeekDisabled.split(/[,\s]*/);
-			o.daysOfWeekDisabled = $.map(o.daysOfWeekDisabled, function (d) {
+			o.DiasOfWeekDisabled = o.DiasOfWeekDisabled||[];
+			if (!$.isArray(o.DiasOfWeekDisabled))
+				o.DiasOfWeekDisabled = o.DiasOfWeekDisabled.split(/[,\s]*/);
+			o.DiasOfWeekDisabled = $.map(o.DiasOfWeekDisabled, function (d) {
 				return parseInt(d, 10);
 			});
 		},
@@ -5262,8 +5262,8 @@ Editableform based on Twitter Bootstrap 3
 			this.updateNavArrows();
 		},
 
-		setDaysOfWeekDisabled: function(daysOfWeekDisabled){
-			this._process_options({daysOfWeekDisabled: daysOfWeekDisabled});
+		setDiasOfWeekDisabled: function(DiasOfWeekDisabled){
+			this._process_options({DiasOfWeekDisabled: DiasOfWeekDisabled});
 			this.update();
 			this.updateNavArrows();
 		},
@@ -5315,13 +5315,13 @@ Editableform based on Twitter Bootstrap 3
 			if(this.o.calendarWeeks){
 				var cell = '<th class="cw">&nbsp;</th>';
 				html += cell;
-				this.picker.find('.datepicker-days thead tr:first-child').prepend(cell);
+				this.picker.find('.datepicker-Dias thead tr:first-child').prepend(cell);
 			}
 			while (dowCnt < this.o.weekStart + 7) {
-				html += '<th class="dow">'+dates[this.o.language].daysMin[(dowCnt++)%7]+'</th>';
+				html += '<th class="dow">'+dates[this.o.language].DiasMin[(dowCnt++)%7]+'</th>';
 			}
 			html += '</tr>';
-			this.picker.find('.datepicker-days thead').append(html);
+			this.picker.find('.datepicker-Dias thead').append(html);
 		},
 
 		fillMonths: function(){
@@ -5363,7 +5363,7 @@ Editableform based on Twitter Bootstrap 3
 				cls.push('active');
 			}
 			if (date.valueOf() < this.o.startDate || date.valueOf() > this.o.endDate ||
-				$.inArray(date.getUTCDay(), this.o.daysOfWeekDisabled) !== -1) {
+				$.inArray(date.getUTCDay(), this.o.DiasOfWeekDisabled) !== -1) {
 				cls.push('disabled');
 			}
 			if (this.range){
@@ -5387,7 +5387,7 @@ Editableform based on Twitter Bootstrap 3
 				endMonth = this.o.endDate !== Infinity ? this.o.endDate.getUTCMonth() : Infinity,
 				currentDate = this.date && this.date.valueOf(),
 				tooltip;
-			this.picker.find('.datepicker-days thead th.datepicker-switch')
+			this.picker.find('.datepicker-Dias thead th.datepicker-switch')
 						.text(dates[this.o.language].months[month]+' '+year);
 			this.picker.find('tfoot th.today')
 						.text(dates[this.o.language].today)
@@ -5398,7 +5398,7 @@ Editableform based on Twitter Bootstrap 3
 			this.updateNavArrows();
 			this.fillMonths();
 			var prevMonth = UTCDate(year, month-1, 28,0,0,0,0),
-				day = DPGlobal.getDaysInMonth(prevMonth.getUTCFullYear(), prevMonth.getUTCMonth());
+				day = DPGlobal.getDiasInMonth(prevMonth.getUTCFullYear(), prevMonth.getUTCMonth());
 			prevMonth.setUTCDate(day);
 			prevMonth.setUTCDate(day - (prevMonth.getUTCDay() - this.o.weekStart + 7)%7);
 			var nextMonth = new Date(prevMonth);
@@ -5419,7 +5419,7 @@ Editableform based on Twitter Bootstrap 3
 							th = new Date(+ws + (7 + 4 - ws.getUTCDay()) % 7 * 864e5),
 							// First Thursday of year, year from thursday
 							yth = new Date(+(yth = UTCDate(th.getUTCFullYear(), 0, 1)) + (7 + 4 - yth.getUTCDay())%7*864e5),
-							// Calendar week: ms between thursdays, div ms per day, div 7 days
+							// Calendar week: ms between thursDias, div ms per day, div 7 Dias
 							calWeek =  (th - yth) / 864e5 / 7 + 1;
 						html.push('<td class="cw">'+ calWeek +'</td>');
 
@@ -5449,7 +5449,7 @@ Editableform based on Twitter Bootstrap 3
 				}
 				prevMonth.setUTCDate(prevMonth.getUTCDate()+1);
 			}
-			this.picker.find('.datepicker-days tbody').empty().append(html.join(''));
+			this.picker.find('.datepicker-Dias tbody').empty().append(html.join(''));
 			var currentYear = this.date && this.date.getUTCFullYear();
 
 			var months = this.picker.find('.datepicker-months')
@@ -5921,7 +5921,7 @@ Editableform based on Twitter Bootstrap 3
 		beforeShowDay: $.noop,
 		calendarWeeks: false,
 		clearBtn: false,
-		daysOfWeekDisabled: [],
+		DiasOfWeekDisabled: [],
 		endDate: Infinity,
 		forceParse: true,
 		format: 'mm/dd/yyyy',
@@ -5943,9 +5943,9 @@ Editableform based on Twitter Bootstrap 3
 	$.fn.datepicker.Constructor = Datepicker;
 	var dates = $.fn.datepicker.dates = {
 		en: {
-			days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-			daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-			daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+			Dias: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+			DiasShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+			DiasMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
 			months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
 			monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
 			today: "Today",
@@ -5956,7 +5956,7 @@ Editableform based on Twitter Bootstrap 3
 	var DPGlobal = {
 		modes: [
 			{
-				clsName: 'days',
+				clsName: 'Dias',
 				navFnc: 'Month',
 				navStep: 1
 			},
@@ -5973,7 +5973,7 @@ Editableform based on Twitter Bootstrap 3
 		isLeapYear: function (year) {
 			return (((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0));
 		},
-		getDaysInMonth: function (year, month) {
+		getDiasInMonth: function (year, month) {
 			return [31, (DPGlobal.isLeapYear(year) ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month];
 		},
 		validParts: /dd?|DD?|mm?|MM?|yy(?:yy)?/g,
@@ -6086,8 +6086,8 @@ Editableform based on Twitter Bootstrap 3
 				format = DPGlobal.parseFormat(format);
 			var val = {
 				d: date.getUTCDate(),
-				D: dates[language].daysShort[date.getUTCDay()],
-				DD: dates[language].days[date.getUTCDay()],
+				D: dates[language].DiasShort[date.getUTCDay()],
+				DD: dates[language].Dias[date.getUTCDay()],
 				m: date.getUTCMonth() + 1,
 				M: dates[language].monthsShort[date.getUTCMonth()],
 				MM: dates[language].months[date.getUTCMonth()],
@@ -6116,7 +6116,7 @@ Editableform based on Twitter Bootstrap 3
 		footTemplate: '<tfoot><tr><th colspan="7" class="today"></th></tr><tr><th colspan="7" class="clear"></th></tr></tfoot>'
 	};
 	DPGlobal.template = '<div class="datepicker">'+
-							'<div class="datepicker-days">'+
+							'<div class="datepicker-Dias">'+
 								'<table class=" table-condensed">'+
 									DPGlobal.headTemplate+
 									'<tbody></tbody>'+

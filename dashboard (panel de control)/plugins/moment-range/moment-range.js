@@ -253,7 +253,7 @@ DateRange = (function() {
   /**
     * Determine if this date range is the same as another.
     *
-    * @param {!DateRange} other Another date range to compare to
+    * @param {!DateRange} other Another date range to Comparar to
     *
     * @return {!boolean}
   *
@@ -268,7 +268,7 @@ DateRange = (function() {
     * The difference of the end vs start.
     *
     * @param {number} unit Unit of difference, if no unit is passed in
-    *                      milliseconds are returned. E.g.: `"days"`,
+    *                      milliseconds are returned. E.g.: `"Dias"`,
     *                      `"months"`, etc...
     *
     * @return {!number}

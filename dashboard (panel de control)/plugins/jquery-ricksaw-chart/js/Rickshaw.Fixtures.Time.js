@@ -81,7 +81,7 @@ Rickshaw.Fixtures.Time = function() {
 			rounded.setUTCFullYear(nearFuture.getUTCFullYear());
 			rounded.setUTCMonth(nearFuture.getUTCMonth());
 			rounded.setUTCDate(1);
-			rounded.setUTCHours(0);
+			rounded.setUTCHoras(0);
 			rounded.setUTCMinutes(0);
 			rounded.setUTCSeconds(0);
 			rounded.setUTCMilliseconds(0);
@@ -97,7 +97,7 @@ Rickshaw.Fixtures.Time = function() {
 			rounded.setUTCFullYear(nearFuture.getUTCFullYear());
 			rounded.setUTCMonth(0);
 			rounded.setUTCDate(1);
-			rounded.setUTCHours(0);
+			rounded.setUTCHoras(0);
 			rounded.setUTCMinutes(0);
 			rounded.setUTCSeconds(0);
 			rounded.setUTCMilliseconds(0);

@@ -81,7 +81,7 @@ Rickshaw.Fixtures.Time.Local = function() {
 			rounded.setMilliseconds(0);
 			rounded.setSeconds(0);
 			rounded.setMinutes(0);
-			rounded.setHours(0);
+			rounded.setHoras(0);
 			rounded.setDate(nearFuture.getDate());
 			rounded.setMonth(nearFuture.getMonth());
 			rounded.setFullYear(nearFuture.getFullYear());
@@ -97,7 +97,7 @@ Rickshaw.Fixtures.Time.Local = function() {
 			rounded.setMilliseconds(0);
 			rounded.setSeconds(0);
 			rounded.setMinutes(0);
-			rounded.setHours(0);
+			rounded.setHoras(0);
 			rounded.setDate(1);
 			rounded.setMonth(nearFuture.getMonth());
 			rounded.setFullYear(nearFuture.getFullYear());
@@ -114,7 +114,7 @@ Rickshaw.Fixtures.Time.Local = function() {
 			rounded.setMilliseconds(0);
 			rounded.setSeconds(0);
 			rounded.setMinutes(0);
-			rounded.setHours(0);
+			rounded.setHoras(0);
 			rounded.setDate(1);
 			rounded.setMonth(0);
 

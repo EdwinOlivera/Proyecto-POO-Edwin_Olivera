@@ -193,30 +193,30 @@ $(document).ready(function(){
             var milliseconds = Date.parse(endtime) - Date.parse(new Date());
             var seconds = Math.floor(milliseconds / 1000 % 60);
             var minutes = Math.floor(milliseconds / 1000 / 60 % 60);
-            var hours = Math.floor(milliseconds / (1000 * 60 * 60) % 24);
-            var days = Math.floor(milliseconds / (1000 * 60 * 60 * 24));
+            var Horas = Math.floor(milliseconds / (1000 * 60 * 60) % 24);
+            var Dias = Math.floor(milliseconds / (1000 * 60 * 60 * 24));
 
         return {
             'total': milliseconds,
             'seconds': seconds,
             'minutes': minutes,
-            'hours': hours,
-            'days': days
+            'Horas': Horas,
+            'Dias': Dias
             };
         }
 
         function initClock(id, endtime) {
             var counter = document.getElementById(id);
-            var daysItem = counter.querySelector('.js-countdown-days');
-            var hoursItem = counter.querySelector('.js-countdown-hours');
+            var DiasItem = counter.querySelector('.js-countdown-Dias');
+            var HorasItem = counter.querySelector('.js-countdown-Horas');
             var minutesItem = counter.querySelector('.js-countdown-minutes');
             var secondsItem = counter.querySelector('.js-countdown-seconds');
 
         function updateClock() {
             var time = getRemainingTime(endtime);
 
-            daysItem.innerHTML = time.days;
-            hoursItem.innerHTML = ('0' + time.hours).slice(-2);
+            DiasItem.innerHTML = time.Dias;
+            HorasItem.innerHTML = ('0' + time.Horas).slice(-2);
             minutesItem.innerHTML = ('0' + time.minutes).slice(-2);
             secondsItem.innerHTML = ('0' + time.seconds).slice(-2);
 
@@ -249,9 +249,9 @@ $(document).ready(function(){
 
     $(function(){
 
-        if(document.getElementById("price-range")){
+        if(document.getElementById("Precio-range")){
         
-        var nonLinearSlider = document.getElementById('price-range');
+        var nonLinearSlider = document.getElementById('Precio-range');
         
         noUiSlider.create(nonLinearSlider, {
             connect: true,

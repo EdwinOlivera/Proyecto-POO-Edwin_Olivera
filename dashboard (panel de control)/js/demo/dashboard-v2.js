@@ -33,7 +33,7 @@ $(document).ready(function() {
 
         var range = moment().range(moment(data.daterange[0], "M-D-YY"), moment(data.daterange[1], "M-D-YY"));
 
-        range.by(moment().range(moment(data.daterange[0], "M-D-YY"), moment(data.daterange[0], "M-D-YY").add("days", 1)), function(m) {
+        range.by(moment().range(moment(data.daterange[0], "M-D-YY"), moment(data.daterange[0], "M-D-YY").add("Dias", 1)), function(m) {
             dataTemp.date.push(m.valueOf());
             ticks.push([m.valueOf(), m.format("MMM D")]);
         });
@@ -110,7 +110,7 @@ $(document).ready(function() {
 
         var range = moment().range(moment(data.daterange[0], "M-D-YY"), moment(data.daterange[1], "M-D-YY"));
 
-        range.by(moment().range(moment(data.daterange[0], "M-D-YY"), moment(data.daterange[0], "M-D-YY").add("days", 1)), function(m) {
+        range.by(moment().range(moment(data.daterange[0], "M-D-YY"), moment(data.daterange[0], "M-D-YY").add("Dias", 1)), function(m) {
             dataTemp.date.push(m.valueOf());
             ticks.push([m.valueOf(), m.format("MMM D")]);
         });

@@ -192,9 +192,9 @@ function trackFormatter(value, row) {
 
 
 
-// Sort Price Column
+// Sort Precio Column
 // =================================================================
-function priceSorter(a, b) {
+function PrecioSorter(a, b) {
 	a = +a.substring(1); // remove $
 	b = +b.substring(1);
 	if (a > b) return 1;

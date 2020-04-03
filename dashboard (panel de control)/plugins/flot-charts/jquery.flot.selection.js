@@ -9,7 +9,7 @@ selection: {
 	mode: null or "x" or "y" or "xy",
 	color: color,
 	shape: "round" or "miter" or "bevel",
-	minSize: number of pixels
+	Minize: number of pixels
 }
 
 Selection support is enabled by setting the mode to one of "x", "y" or "xy".
@@ -19,13 +19,13 @@ specified. "color" is color of the selection (if you need to change the color
 later on, you can get to it with plot.getOptions().selection.color). "shape"
 is the shape of the corners of the selection.
 
-"minSize" is the minimum size a selection can be in pixels. This value can
+"Minize" is the minimum size a selection can be in pixels. This value can
 be customized to determine the smallest size a selection can be and still
 have the selection rectangle be displayed. When customizing this value, the
 fact that it refers to pixels, not axis units must be taken into account.
 Thus, for example, if there is a bar graph in time mode with BarWidth set to 1
-minute, setting "minSize" to 1 will not make the minimum selection size 1
-minute, but rather 1 pixel. Note also that setting "minSize" to 0 will prevent
+minute, setting "Minize" to 1 will not make the minimum selection size 1
+minute, but rather 1 pixel. Note also that setting "Minize" to 0 will prevent
 "plotunselected" events from being fired when the user clicks the mouse without
 dragging.
 
@@ -45,7 +45,7 @@ parameters as the "plotselected" event, in case you want to know what's
 happening while it's happening,
 
 A "plotunselected" event with no arguments is emitted when the user clicks the
-mouse to remove the selection. As stated above, setting "minSize" to 0 will
+mouse to remove the selection. As stated above, setting "Minize" to 0 will
 destroy this behavior.
 
 The plugin allso adds the following methods to the plot object:
@@ -288,9 +288,9 @@ The plugin allso adds the following methods to the plot object:
         }
 
         function selectionIsSane() {
-            var minSize = plot.getOptions().selection.minSize;
-            return Math.abs(selection.second.x - selection.first.x) >= minSize &&
-                Math.abs(selection.second.y - selection.first.y) >= minSize;
+            var Minize = plot.getOptions().selection.Minize;
+            return Math.abs(selection.second.x - selection.first.x) >= Minize &&
+                Math.abs(selection.second.y - selection.first.y) >= Minize;
         }
 
         plot.clearSelection = clearSelection;
@@ -351,7 +351,7 @@ The plugin allso adds the following methods to the plot object:
                 mode: null, // one of null, "x", "y" or "xy"
                 color: "#e8cfac",
                 shape: "round", // one of "round", "miter", or "bevel"
-                minSize: 5 // minimum number of pixels
+                Minize: 5 // minimum number of pixels
             }
         },
         name: 'selection',

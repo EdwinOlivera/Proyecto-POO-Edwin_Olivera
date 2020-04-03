@@ -1068,12 +1068,12 @@ function(a) {
                 day: ["D", "date"],
                 month: ["M", "month"],
                 year: ["Y", "year"],
-                hour: ["[Hh]", "hours"],
+                hour: ["[Hh]", "Horas"],
                 minute: ["m", "minutes"],
                 second: ["s", "seconds"],
                 ampm: ["[Aa]", ""]
             }, this.$widget = a('<span class="combodate"></span>').html(this.getTemplate()), this.initCombos(), this.$widget.on("change", "select", a.proxy(function(b) {
-                this.$element.val(this.getValue()).change(), this.options.smartDays && (a(b.target).is(".month") || a(b.target).is(".year")) && this.fillCombo("day")
+                this.$element.val(this.getValue()).change(), this.options.smartDias && (a(b.target).is(".month") || a(b.target).is(".year")) && this.fillCombo("day")
             }, this)), this.$widget.find("select").css("width", "auto"), this.$element.hide().after(this.$widget), this.setValue(this.$element.val() || this.options.value)
         },
         getTemplate: function() {
@@ -1119,10 +1119,10 @@ function(a) {
             var a, b, c = this.fillCommon("d"),
                 d = -1 !== this.options.template.indexOf("DD"),
                 e = 31;
-            if (this.options.smartDays && this.$month && this.$year) {
+            if (this.options.smartDias && this.$month && this.$year) {
                 var f = parseInt(this.$month.val(), 10),
                     g = parseInt(this.$year.val(), 10);
-                isNaN(f) || isNaN(g) || (e = moment([g, f]).daysInMonth())
+                isNaN(f) || isNaN(g) || (e = moment([g, f]).DiasInMonth())
             }
             for (b = 1; e >= b; b++) a = d ? this.leadZero(b) : b, c.push([b, a]);
             return c
@@ -1200,7 +1200,7 @@ function(a) {
                     "ampm" !== a && (f[a] = d[b[1]]())
                 }), this.$ampm && (f.hour >= 12 ? (f.ampm = "pm", f.hour > 12 && (f.hour -= 12)) : (f.ampm = "am", 0 === f.hour && (f.hour = 12))), a.each(f, function(a, b) {
                     e["$" + a] && ("minute" === a && e.options.minuteStep > 1 && e.options.roundTime && (b = c(e["$" + a], b)), "second" === a && e.options.secondStep > 1 && e.options.roundTime && (b = c(e["$" + a], b)), e["$" + a].val(b))
-                }), this.options.smartDays && this.fillCombo("day"), this.$element.val(d.format(this.options.format)).change())
+                }), this.options.smartDias && this.fillCombo("day"), this.$element.val(d.format(this.options.format)).change())
             }
         },
         highlight: function(a) {
@@ -1232,7 +1232,7 @@ function(a) {
         firstItem: "empty",
         errorClass: null,
         roundTime: !0,
-        smartDays: !1
+        smartDias: !1
     }
 }(window.jQuery),
 function(a) {
@@ -1381,7 +1381,7 @@ function(a) {
     var e = function(b, c) {
         this._process_options(c), this.element = a(b), this.isInline = !1, this.isInput = this.element.is("input"), this.component = this.element.is(".date") ? this.element.find(".add-on, .btn") : !1, this.hasInput = this.component && this.element.find("input").length, this.component && 0 === this.component.length && (this.component = !1), this.picker = a(l.template), this._buildEvents(), this._attachEvents(), this.isInline ? this.picker.addClass("datepicker-inline").appendTo(this.element) : this.picker.addClass("datepicker-dropdown dropdown-menu"), this.o.rtl && (this.picker.addClass("datepicker-rtl"), this.picker.find(".prev i, .next i").toggleClass("icon-arrow-left icon-arrow-right")), this.viewMode = this.o.startView, this.o.calendarWeeks && this.picker.find("tfoot th.today").attr("colspan", function(a, b) {
             return parseInt(b) + 1
-        }), this._allow_update = !1, this.setStartDate(this.o.startDate), this.setEndDate(this.o.endDate), this.setDaysOfWeekDisabled(this.o.daysOfWeekDisabled), this.fillDow(), this.fillMonths(), this._allow_update = !0, this.update(), this.showMode(), this.isInline && this.show()
+        }), this._allow_update = !1, this.setStartDate(this.o.startDate), this.setEndDate(this.o.endDate), this.setDiasOfWeekDisabled(this.o.DiasOfWeekDisabled), this.fillDow(), this.fillMonths(), this._allow_update = !0, this.update(), this.showMode(), this.isInline && this.show()
     };
     e.prototype = {
         constructor: e,
@@ -1415,7 +1415,7 @@ function(a) {
             }
             c.startView = Math.max(c.startView, c.minViewMode), c.weekStart %= 7, c.weekEnd = (c.weekStart + 6) % 7;
             var e = l.parseFormat(c.format);
-            c.startDate !== -1 / 0 && (c.startDate = l.parseDate(c.startDate, e, c.language)), 1 / 0 !== c.endDate && (c.endDate = l.parseDate(c.endDate, e, c.language)), c.daysOfWeekDisabled = c.daysOfWeekDisabled || [], a.isArray(c.daysOfWeekDisabled) || (c.daysOfWeekDisabled = c.daysOfWeekDisabled.split(/[,\s]*/)), c.daysOfWeekDisabled = a.map(c.daysOfWeekDisabled, function(a) {
+            c.startDate !== -1 / 0 && (c.startDate = l.parseDate(c.startDate, e, c.language)), 1 / 0 !== c.endDate && (c.endDate = l.parseDate(c.endDate, e, c.language)), c.DiasOfWeekDisabled = c.DiasOfWeekDisabled || [], a.isArray(c.DiasOfWeekDisabled) || (c.DiasOfWeekDisabled = c.DiasOfWeekDisabled.split(/[,\s]*/)), c.DiasOfWeekDisabled = a.map(c.DiasOfWeekDisabled, function(a) {
                 return parseInt(a, 10)
             })
         },
@@ -1524,9 +1524,9 @@ function(a) {
                 endDate: a
             }), this.update(), this.updateNavArrows()
         },
-        setDaysOfWeekDisabled: function(a) {
+        setDiasOfWeekDisabled: function(a) {
             this._process_options({
-                daysOfWeekDisabled: a
+                DiasOfWeekDisabled: a
             }), this.update(), this.updateNavArrows()
         },
         place: function() {
@@ -1555,10 +1555,10 @@ function(a) {
                 b = "<tr>";
             if (this.o.calendarWeeks) {
                 var c = '<th class="cw">&nbsp;</th>';
-                b += c, this.picker.find(".datepicker-days thead tr:first-child").prepend(c)
+                b += c, this.picker.find(".datepicker-Dias thead tr:first-child").prepend(c)
             }
-            for (; a < this.o.weekStart + 7;) b += '<th class="dow">' + k[this.o.language].daysMin[a++ % 7] + "</th>";
-            b += "</tr>", this.picker.find(".datepicker-days thead").append(b)
+            for (; a < this.o.weekStart + 7;) b += '<th class="dow">' + k[this.o.language].DiasMin[a++ % 7] + "</th>";
+            b += "</tr>", this.picker.find(".datepicker-Dias thead").append(b)
         },
         fillMonths: function() {
             for (var a = "", b = 0; 12 > b;) a += '<span class="month">' + k[this.o.language].monthsShort[b++] + "</span>";
@@ -1575,7 +1575,7 @@ function(a) {
                 e = this.viewDate.getUTCMonth(),
                 f = this.date.valueOf(),
                 g = new Date;
-            return b.getUTCFullYear() < d || b.getUTCFullYear() == d && b.getUTCMonth() < e ? c.push("old") : (b.getUTCFullYear() > d || b.getUTCFullYear() == d && b.getUTCMonth() > e) && c.push("new"), this.o.todayHighlight && b.getUTCFullYear() == g.getFullYear() && b.getUTCMonth() == g.getMonth() && b.getUTCDate() == g.getDate() && c.push("today"), f && b.valueOf() == f && c.push("active"), (b.valueOf() < this.o.startDate || b.valueOf() > this.o.endDate || -1 !== a.inArray(b.getUTCDay(), this.o.daysOfWeekDisabled)) && c.push("disabled"), this.range && (b > this.range[0] && b < this.range[this.range.length - 1] && c.push("range"), -1 != a.inArray(b.valueOf(), this.range) && c.push("selected")), c
+            return b.getUTCFullYear() < d || b.getUTCFullYear() == d && b.getUTCMonth() < e ? c.push("old") : (b.getUTCFullYear() > d || b.getUTCFullYear() == d && b.getUTCMonth() > e) && c.push("new"), this.o.todayHighlight && b.getUTCFullYear() == g.getFullYear() && b.getUTCMonth() == g.getMonth() && b.getUTCDate() == g.getDate() && c.push("today"), f && b.valueOf() == f && c.push("active"), (b.valueOf() < this.o.startDate || b.valueOf() > this.o.endDate || -1 !== a.inArray(b.getUTCDay(), this.o.DiasOfWeekDisabled)) && c.push("disabled"), this.range && (b > this.range[0] && b < this.range[this.range.length - 1] && c.push("range"), -1 != a.inArray(b.valueOf(), this.range) && c.push("selected")), c
         },
         fill: function() {
             var c, d = new Date(this.viewDate),
@@ -1585,9 +1585,9 @@ function(a) {
                 h = this.o.startDate !== -1 / 0 ? this.o.startDate.getUTCMonth() : -1 / 0,
                 i = 1 / 0 !== this.o.endDate ? this.o.endDate.getUTCFullYear() : 1 / 0,
                 j = 1 / 0 !== this.o.endDate ? this.o.endDate.getUTCMonth() : 1 / 0;
-            this.date && this.date.valueOf(), this.picker.find(".datepicker-days thead th.datepicker-switch").text(k[this.o.language].months[f] + " " + e), this.picker.find("tfoot th.today").text(k[this.o.language].today).toggle(this.o.todayBtn !== !1), this.picker.find("tfoot th.clear").text(k[this.o.language].clear).toggle(this.o.clearBtn !== !1), this.updateNavArrows(), this.fillMonths();
+            this.date && this.date.valueOf(), this.picker.find(".datepicker-Dias thead th.datepicker-switch").text(k[this.o.language].months[f] + " " + e), this.picker.find("tfoot th.today").text(k[this.o.language].today).toggle(this.o.todayBtn !== !1), this.picker.find("tfoot th.clear").text(k[this.o.language].clear).toggle(this.o.clearBtn !== !1), this.updateNavArrows(), this.fillMonths();
             var m = b(e, f - 1, 28, 0, 0, 0, 0),
-                n = l.getDaysInMonth(m.getUTCFullYear(), m.getUTCMonth());
+                n = l.getDiasInMonth(m.getUTCFullYear(), m.getUTCMonth());
             m.setUTCDate(n), m.setUTCDate(n - (m.getUTCDay() - this.o.weekStart + 7) % 7);
             var o = new Date(m);
             o.setUTCDate(o.getUTCDate() + 42), o = o.valueOf();
@@ -1607,7 +1607,7 @@ function(a) {
                     classes: v
                 }), v.enabled === !1 && p.push("disabled"), v.classes && (p = p.concat(v.classes.split(/\s+/))), v.tooltip && (c = v.tooltip), p = a.unique(p), q.push('<td class="' + p.join(" ") + '"' + (c ? ' title="' + c + '"' : "") + ">" + m.getUTCDate() + "</td>"), m.getUTCDay() == this.o.weekEnd && q.push("</tr>"), m.setUTCDate(m.getUTCDate() + 1)
             }
-            this.picker.find(".datepicker-days tbody").empty().append(q.join(""));
+            this.picker.find(".datepicker-Dias tbody").empty().append(q.join(""));
             var w = this.date && this.date.getUTCFullYear(),
                 x = this.picker.find(".datepicker-months").find("th:eq(1)").text(e).end().find("span").removeClass("active");
             w && w == e && x.eq(this.date.getUTCMonth()).addClass("active"), (g > e || e > i) && x.addClass("disabled"), e == g && x.slice(0, h).addClass("disabled"), e == i && x.slice(j + 1).addClass("disabled"), q = "", e = 10 * parseInt(e / 10, 10);
@@ -1838,7 +1838,7 @@ function(a) {
             beforeShowDay: a.noop,
             calendarWeeks: !1,
             clearBtn: !1,
-            daysOfWeekDisabled: [],
+            DiasOfWeekDisabled: [],
             endDate: 1 / 0,
             forceParse: !0,
             format: "mm/dd/yyyy",
@@ -1856,9 +1856,9 @@ function(a) {
     a.fn.datepicker.Constructor = e;
     var k = a.fn.datepicker.dates = {
             en: {
-                days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-                daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+                Dias: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                DiasShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+                DiasMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
                 months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
                 monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
                 today: "Today",
@@ -1867,7 +1867,7 @@ function(a) {
         },
         l = {
             modes: [{
-                clsName: "days",
+                clsName: "Dias",
                 navFnc: "Month",
                 navStep: 1
             }, {
@@ -1882,7 +1882,7 @@ function(a) {
             isLeapYear: function(a) {
                 return 0 === a % 4 && 0 !== a % 100 || 0 === a % 400
             },
-            getDaysInMonth: function(a, b) {
+            getDiasInMonth: function(a, b) {
                 return [31, l.isLeapYear(a) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][b]
             },
             validParts: /dd?|DD?|mm?|MM?|yy(?:yy)?/g,
@@ -1968,8 +1968,8 @@ function(a) {
                 "string" == typeof c && (c = l.parseFormat(c));
                 var e = {
                     d: b.getUTCDate(),
-                    D: k[d].daysShort[b.getUTCDay()],
-                    DD: k[d].days[b.getUTCDay()],
+                    D: k[d].DiasShort[b.getUTCDay()],
+                    DD: k[d].Dias[b.getUTCDay()],
                     m: b.getUTCMonth() + 1,
                     M: k[d].monthsShort[b.getUTCMonth()],
                     MM: k[d].months[b.getUTCMonth()],
@@ -1984,7 +1984,7 @@ function(a) {
             contTemplate: '<tbody><tr><td colspan="7"></td></tr></tbody>',
             footTemplate: '<tfoot><tr><th colspan="7" class="today"></th></tr><tr><th colspan="7" class="clear"></th></tr></tfoot>'
         };
-    l.template = '<div class="datepicker"><div class="datepicker-days"><table class=" table-condensed">' + l.headTemplate + "<tbody></tbody>" + l.footTemplate + "</table>" + "</div>" + '<div class="datepicker-months">' + '<table class="table-condensed">' + l.headTemplate + l.contTemplate + l.footTemplate + "</table>" + "</div>" + '<div class="datepicker-years">' + '<table class="table-condensed">' + l.headTemplate + l.contTemplate + l.footTemplate + "</table>" + "</div>" + "</div>", a.fn.datepicker.DPGlobal = l, a.fn.datepicker.noConflict = function() {
+    l.template = '<div class="datepicker"><div class="datepicker-Dias"><table class=" table-condensed">' + l.headTemplate + "<tbody></tbody>" + l.footTemplate + "</table>" + "</div>" + '<div class="datepicker-months">' + '<table class="table-condensed">' + l.headTemplate + l.contTemplate + l.footTemplate + "</table>" + "</div>" + '<div class="datepicker-years">' + '<table class="table-condensed">' + l.headTemplate + l.contTemplate + l.footTemplate + "</table>" + "</div>" + "</div>", a.fn.datepicker.DPGlobal = l, a.fn.datepicker.noConflict = function() {
         return a.fn.datepicker = g, this
     }, a(document).on("focus.datepicker.data-api click.datepicker.data-api", '[data-provide="datepicker"]', function(b) {
         var c = a(this);

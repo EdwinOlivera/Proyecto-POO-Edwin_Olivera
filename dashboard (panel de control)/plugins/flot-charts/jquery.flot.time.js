@@ -26,20 +26,20 @@ for details.
         
         var r = [];
         var escape = false;
-        var hours = d.getHours();
-        var isAM = hours < 12;
+        var Horas = d.getHoras();
+        var isAM = Horas < 12;
         if (monthNames == null)
             monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
         if (dayNames == null)
             dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-        var hours12;
-        if (hours > 12) {
-            hours12 = hours - 12;
-        } else if (hours == 0) {
-            hours12 = 12;
+        var Horas12;
+        if (Horas > 12) {
+            Horas12 = Horas - 12;
+        } else if (Horas == 0) {
+            Horas12 = 12;
         } else {
-            hours12 = hours;
+            Horas12 = Horas;
         }
 
         for (var i = 0; i < fmt.length; ++i) {
@@ -51,9 +51,9 @@ for details.
                 case 'b': c = "" + monthNames[d.getMonth()]; break;
                 case 'd': c = leftPad(d.getDate()); break;
                 case 'e': c = leftPad(d.getDate(), " "); break;
-                case 'H': c = leftPad(hours); break;
-                case 'I': c = leftPad(hours12); break;
-                case 'l': c = leftPad(hours12, " "); break;
+                case 'H': c = leftPad(Horas); break;
+                case 'I': c = leftPad(Horas12); break;
+                case 'l': c = leftPad(Horas12, " "); break;
                 case 'm': c = leftPad(d.getMonth() + 1); break;
                 case 'M': c = leftPad(d.getMinutes()); break;
                 case 'S': c = leftPad(d.getSeconds()); break;
@@ -95,7 +95,7 @@ for details.
             addProxyMethod(utc, "strftime", d, "strftime");
         addProxyMethod(utc, "getTime", d, "getTime");
         addProxyMethod(utc, "setTime", d, "setTime");
-        var props = [ "Date", "Day", "FullYear", "Hours", "Milliseconds", "Minutes", "Month", "Seconds" ];
+        var props = [ "Date", "Day", "FullYear", "Horas", "Milliseconds", "Minutes", "Month", "Seconds" ];
         for (var p = 0; p < props.length; p++) {
             addProxyMethod(utc, "get" + props[p], d, "getUTC" + props[p]);
             addProxyMethod(utc, "set" + props[p], d, "setUTC" + props[p]);
@@ -155,19 +155,19 @@ for details.
                     axis.tickGenerator = function(axis) {
                         var ticks = [],
                             d = dateGenerator(axis.min, opts),
-                            minSize = 0;
+                            Minize = 0;
 
                         if (opts.minTickSize != null) {
                             if (typeof opts.tickSize == "number")
-                                minSize = opts.tickSize;
+                                Minize = opts.tickSize;
                             else
-                                minSize = opts.minTickSize[0] * timeUnitSize[opts.minTickSize[1]];
+                                Minize = opts.minTickSize[0] * timeUnitSize[opts.minTickSize[1]];
                         }
 
                         for (var i = 0; i < spec.length - 1; ++i)
                             if (axis.delta < (spec[i][0] * timeUnitSize[spec[i][1]]
                                               + spec[i + 1][0] * timeUnitSize[spec[i + 1][1]]) / 2
-                                && spec[i][0] * timeUnitSize[spec[i][1]] >= minSize)
+                                && spec[i][0] * timeUnitSize[spec[i][1]] >= Minize)
                                 break;
                         var size = spec[i][0];
                         var unit = spec[i][1];
@@ -209,7 +209,7 @@ for details.
                         if (unit == "minute")
                             d.setMinutes(floorInBase(d.getMinutes(), tickSize));
                         if (unit == "hour")
-                            d.setHours(floorInBase(d.getHours(), tickSize));
+                            d.setHoras(floorInBase(d.getHoras(), tickSize));
                         if (unit == "month")
                             d.setMonth(floorInBase(d.getMonth(), tickSize));
                         if (unit == "year")
@@ -222,7 +222,7 @@ for details.
                         if (step >= timeUnitSize.hour)
                             d.setMinutes(0);
                         if (step >= timeUnitSize.day)
-                            d.setHours(0);
+                            d.setHoras(0);
                         if (step >= timeUnitSize.day * 4)
                             d.setDate(1);
                         if (step >= timeUnitSize.year)
@@ -244,8 +244,8 @@ for details.
                                     d.setMonth(d.getMonth() + 1);
                                     var end = d.getTime();
                                     d.setTime(v + carry * timeUnitSize.hour + (end - start) * tickSize);
-                                    carry = d.getHours();
-                                    d.setHours(0);
+                                    carry = d.getHoras();
+                                    d.setHoras(0);
                                 }
                                 else
                                     d.setMonth(d.getMonth() + tickSize);
