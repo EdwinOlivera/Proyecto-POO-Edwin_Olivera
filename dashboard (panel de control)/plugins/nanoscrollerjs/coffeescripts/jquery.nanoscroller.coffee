@@ -1,5 +1,5 @@
 #  @project nanoScrollerJS
-#  @url http://jamesflorentino.github.com/nanoScrollerJS/
+#  @url http://jamesflorentino.github.com/nanoScroller../file/js/
 #  @author James Florentino
 #  @contributor Krister Kari
 
