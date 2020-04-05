@@ -1,0 +1,9 @@
+.Error{
+    color: red;
+    border: red 1px;
+}
+.succes{
+    color: black;
+    font-weight: bold;
+    border: chartreuse 1px;
+}

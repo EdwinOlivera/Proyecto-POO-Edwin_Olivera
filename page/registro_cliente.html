@@ -144,13 +144,13 @@
 							<div class="row  col-12 form-group">
 								<div class="col-6">
 
-									<input type="text" class="form-control" id="name" name="name"
+									<input type="text" class="form-control" id="nombre" name="name"
 										placeholder="Nombre de usuario" onfocus="this.placeholder = ''"
 										onblur="this.placeholder = 'Nombre de usuario'">
 								</div>
 								<div class="col-6">
 
-									<input type="text" class="form-control" id="lastName" name="lastName"
+									<input type="text" class="form-control" id="apellido" name="lastName"
 										placeholder="Apellido" onfocus="this.placeholder = ''"
 										onblur="this.placeholder = 'Apellido'">
 								</div>
@@ -169,23 +169,23 @@
 								</div>
 								<div class="col-6">
 
-									<input type="email" class="form-control" id="email-user" name="email-user"
+									<input type="email" class="form-control" id="correo" name="email-user"
 										placeholder="Correo Electronico" onfocus="this.placeholder = ''"
 										onblur="this.placeholder = 'Correo Electronico'">
 								</div>
 							</div>
 							<!-- ***************************** -->
 
-							<!-- Repetir contraseña y Edad -->
+							<!-- Repetir contraseña e ingresar la Edad -->
 							<div class="row col-9 form-group">
 
 								<div class="col-8 ">
-									<input type="password" class="form-control" id="password" name="password"
+									<input type="password" class="form-control" id="passwordRepeat" name="password"
 										placeholder="Repita la contraseña" onfocus="this.placeholder = ''"
 										onblur="this.placeholder = 'Repita la contraseña'">
 								</div>
-								<div class="col-2 ">
-									<input type="text" class="form-control" id="edad-user" name="edad-user"
+								<div class="col-xl-3 col-sm-3 ">
+									<input type="text" class="form-control" id="edad" name="edad-user"
 										placeholder="Edad" onfocus="this.placeholder = ''"
 										onblur="this.placeholder = 'Edad'">
 								</div>
@@ -199,12 +199,12 @@
 								<div>Genero</div>
 								<div class="form-check form-check-inline ">
 									<input type="radio" class="form-check-input" id="male_user"
-										name="materialExampleRadios">
+										name="genero">
 									<label class="form-check-label" for="male_user">Hombre</label>
 								</div>
 								<div class="form-check  form-check-inline">
 									<input type="radio" class="form-check-input" id="woman_user"
-										name="materialExampleRadios">
+										name="genero">
 									<label class="form-check-label" for="woman_user">Mujer</label>
 								</div>
 							</div>
@@ -214,7 +214,7 @@
 							<div class="row pt-3 mt-3 col-12 form-group" style="border-top: 2px solid rgba(138, 134, 134, 0.404);">
 
 								<div class="col-6">
-									<select class="custom-select " id="select-departamentos" size="3"  style=" border-top-left-radius: 20px; border: 2px solid rgba(138, 134, 134, 0.404) ; border-bottom-left-radius: 20px; ">
+									<select class="custom-select " id="select-departamentos" size="3"  style=" border-top-left-radius: 8px; border: 2px solid rgba(138, 134, 134, 0.404) ; border-bottom-left-radius: 8px; ">
 										<option value = "0" selected>Seleccionar un Departamento</option>
 										<option value="1">Atlántida</option>
 										<option value="2">Choluteca</option>
@@ -237,7 +237,7 @@
 									</select>
 								</div>
 								<div class="col-6" >
-									<select class="custom-select " id="select-municipio" size="3" style=" border-top-left-radius: 20px; border: 2px solid rgba(138, 134, 134, 0.404) ; border-bottom-left-radius: 20px; " >
+									<select class="custom-select " id="select-municipio" size="3" style=" border-top-left-radius: 8px; border: 2px solid rgba(138, 134, 134, 0.404) ; border-bottom-left-radius: 8px; " >
 										<option value = "0" selected>Seleccionar un Municipio</option>
 										<option value="1">"Se llenara con JS"</option>
 									</select>
@@ -255,17 +255,17 @@
 									<div>Tipo de tarjeta</div>
 									<div class="form-check form-check-inline ">
 										<input type="radio" class="form-check-input" id="ningunaTarjeta"
-											name="materialExampleRadios" checked>
+											name="tipoTarjeta" checked>
 										<label class="form-check-label" for="ningunaTarjeta">Ninguna</label>
 									</div>
 									<div class="form-check form-check-inline ">
 										<input type="radio" class="form-check-input" id="masterCard"
-											name="materialExampleRadios">
+											name="tipoTarjeta">
 										<label class="form-check-label" for="masterCard">Master Card</label>
 									</div>
 									<div class="form-check  form-check-inline">
 										<input type="radio" class="form-check-input" id="visa"
-											name="materialExampleRadios">
+											name="tipoTarjeta">
 										<label class="form-check-label" for="visa">Visa</label>
 									</div>
 								</div>
@@ -458,6 +458,8 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="../file/js/gmaps.min.js"></script>
 	<script src="../file/js/main.js"></script>
+
+	<script src="../file/js_de_Edwin/validar_usuarios.js"></script>
 </body>
 
 </html>
