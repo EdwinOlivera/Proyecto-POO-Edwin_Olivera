@@ -1,0 +1,9 @@
+Categorías de Zuhause
+1.	Fontanería
+2.	Muebles
+3.	Baño
+4.	Jardinería
+5.	Pinturas
+6.	Diseños de interiores
+7.	Electrodomésticos
+8.	Reparaciones eléctricas

@@ -328,8 +328,11 @@ section {
 ********About CSS*******
 **************************/
 #about-us {
-  background-image: url(../images/about-bg.jpg);
+  background-image: url(../images/Muebles/img-7.png);
   padding: 60px 0;
+  color: #000;
+  font-size: large;
+  font-weight: bold;
 }
 
 #about-us h2 {
@@ -589,8 +592,11 @@ section {
 **************************/
 #features {
   text-align: center;
-  background-image: url(../images/features-bg.jpg);
+  background-image: url(../images/Fontaneria/img-5.png);
+  color: #000;
+  font-weight: bolder;
 }
+
 
 #features i {
   font-size: 48px;
@@ -600,7 +606,9 @@ section {
   margin-top: 15px;
   font-size: 30px;
   margin-bottom: 7px;
-  color: #fff;
+  font-weight: bolder;
+  color: #000;
+  background-color: #00b3ff80;
 }
 
 #features .slider-overlay {
