@@ -1,18 +1,14 @@
-/*
-  Theme Name: Oxygen
-  Theme Uri: http://www.themeum.com
-  Author: Themeum
-  Author Uri: http://www.themeum.com
-  Description: Onepage Site Template
-  Version: 1.0
-*/
 
-/*************************
-*******Typography******
-**************************/
+@font-face {
+  font-family: Verlag;
+  src: 
+  url('../fonts/Verlag-Black.otf'),  url('../fonts/Verlag-Bold.otf'),  url('../fonts/Verlag-Bold.otf'),
+  url('../fonts/Verlag-Book.otf'),   url('../fonts/Verlag-Light.otf'), 
+  url('../fonts/Verlag-XLight.otf'); 
+}
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif,Verlag;
   font-size: 14px;
   line-height: 24px;
   color: #666;
